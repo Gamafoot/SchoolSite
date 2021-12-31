@@ -47,7 +47,7 @@
                     <h1>СРЕДНЯЯ ОБЩЕОБРАЗОВАТЕЛЬНАЯ ШКОЛА № 9</h1>
                     <h2 style="color:green">_ _ _ _ _ _ _ _ _ _ _ _ _ _</h2>
                     <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sapiente cum eaque! Provident iusto nisi excepturi tempore vel velit. Reprehenderit praesentium reiciendis aperiam? Alias illo pariatur voluptate modi. Dolores, dicta.</h4>
-                    <button class="btn-main" onclick="location.href = '#about'">Узнать больше</button>
+                    <button class="btn-main" style="color:white;" onclick="location.href = '#tables'">Узнать больше</button>
                 </div>
             </div>
         </div>
@@ -55,28 +55,29 @@
         <div class="overlay"></div>
     </header>
 
-    <section id="tables" style="height: 830px;overflow: auto; background-color: rgb(32, 32, 32);">
+    <section id="tables" style="height: 830px;overflow: auto; background-color: rgb(37, 37, 37);">
         <br/><div class="container">
             <h1 style="text-align: center;">Рассписание</h1><br/>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Выберите класс</option>
-                <option value="1">1 класс</option>
-                <option value="2">2 класс</option>
-                <option value="3">3 класс</option>
-                <option value="4">4 класс</option>
-                <option value="5">5 класс</option>
-                <option value="6">6 класс</option>
-                <option value="7">7 класс</option>
-                <option value="8">8 класс</option>
-                <option value="9">9 класс</option>
-                <option value="10">10 класс</option>
-                <option value="11">11 класс</option>
-            </select><br/>
+            <form action="" method="get" onchange="this.form.submit();">
+                <select class="form-select" style="background-color: rgb(34, 34, 34); color: white;" aria-label="Default select example">
+                    <option value="1">1 класс</option>
+                    <option value="2">2 класс</option>
+                    <option value="3">3 класс</option>
+                    <option value="4">4 класс</option>
+                    <option value="5">5 класс</option>
+                    <option value="6">6 класс</option>
+                    <option value="7">7 класс</option>
+                    <option value="8">8 класс</option>
+                    <option value="9">9 класс</option>
+                    <option value="10">10 класс</option>
+                    <option value="11">11 класс</option>
+                </select><br/>
+            </form>
             <h2 style="text-align: center;">1 класса</h2><br/>
             <div class='tables'>
                 <div class="row">
                     <div class="col-6">
-                        <table id="sas" class="table table-bordered">
+                        <table id="sas" class="table table-bordered" style="color: white">
                             <thead>
                                 <tr>
                                     <th style="text-align: center;" colspan="3">Понедельник</th>
@@ -100,7 +101,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" style="color: white">
                             <thead>
                                 <tr>
                                     <th style="text-align: center" colspan="3">Вторник</th>
@@ -124,7 +125,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" style="color: white">
                             <thead>
                                 <tr>
                                     <th style="text-align: center" colspan="3">Среда</th>
@@ -150,10 +151,10 @@
                         </table>
                     </div>
                     <div class="col-6">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" style="color: white">
                             <thead>
                                 <tr>
-                                    <th style="text-align: center" colspan="3">Четверг</th>
+                                    <th style="text-align: center;" colspan="3">Четверг</th>
                                 </tr>
                                 <tr>
                                     <th scope="col">#</th>
@@ -174,7 +175,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" style="color: white">
                             <thead>
                                 <tr>
                                     <th style="text-align: center" colspan="3">Пятница</th>
@@ -198,7 +199,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" style="color: white">
                             <thead>
                                 <tr>
                                     <th style="text-align: center" colspan="3">Суббота</th>
@@ -278,42 +279,42 @@
             <br/><h1 style="text-align: center;">Новости школы</h1><br/>
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card_" style="width: 18rem;">
                         <div class="card-img">
                             <img src="img/Новости/точка роста/03.jpg" class="card-img-top">
                         </div> 
                         <div class="card-body">
                         <h5 class="card-title">Точка роста</h5>
                         <p class="card-text">специальные образовательные центры, создаваемые на базе школ в селах и малых городах. Их открытие предусмотрено федеральным проектом ...</p>
-                        <a href="#" class="btn" style="background-color: rgb(68, 163, 68);">Подробнее</a>
+                        <a href="#" class="btn" style="background-color: rgb(68, 163, 68); color:white;">Подробнее</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card_" style="width: 18rem;">
                         <div class="card-img">
                             <img src="img/Новости/Выпускной/01.jpg" class="card-img-top">
                         </div>
                         <div class="card-body">
                         <h5 class="card-title">Выпускной</h5>
                         <p class="card-text">22 мая для учащихся 9 и 11 классов прозвенел последний звонок!</p>
-                        <a href="#" class="btn" style="background-color: rgb(68, 163, 68);">Подробнее</a>
+                        <a href="#" class="btn" style="background-color: rgb(68, 163, 68); color:white;">Подробнее</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card_" style="width: 18rem;">
                         <div class="card-img">
                             <img src="img/Новости/Последний звонок/01.jpg" class="card-img-top">
                         </div>
                         <div class="card-body">
                         <h5 class="card-title">Последний звонок</h5>
                         <p class="card-text">29 мая ученики 4-х классов простились с начальной школой!</p>
-                        <a href="#" class="btn" style="background-color: rgb(68, 163, 68);">Подробней</a>
+                        <a href="#" class="btn" style="background-color: rgb(68, 163, 68); color:white;">Подробней</a>
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn" id="btn-news">Все новости</button>
+                <button type="submit" class="btn" id="btn-news" style="color:white;">Все новости</button>
         </div>
     </section>
 
