@@ -1,0 +1,62 @@
+header{
+    position: relative;
+    background-image: url("../img/school.jpg");
+    min-height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    background-attachment: fixed;
+}
+
+header .row{
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.header-content{
+    position: relative;
+    top: 100px;
+    text-align: center;
+    color: white;
+    opacity: .9;
+    z-index: 1;
+}
+
+.header-content h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.header-content h4{
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 35px;
+    opacity: .9;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+}
+
+.btn-main{
+    padding: 10px 35px;
+    margin-top: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: rgb(68, 163, 68);
+    transition: all .3s ease;
+    transform: scale(1.1);
+}
+
+.btn-main:hover{
+    box-shadow: 0 0 10px rgb(68, 163, 68);
+    transform: scale(1.17)
+}
