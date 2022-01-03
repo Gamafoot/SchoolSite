@@ -58,8 +58,8 @@
     <section id="tables" style="height: 830px;overflow: auto; background-color: rgb(37, 37, 37);">
         <br/><div class="container">
             <h1 style="text-align: center;">Рассписание</h1><br/>
-            <form action="" method="get" onchange="this.form.submit();">
-                <select class="form-select" style="background-color: rgb(34, 34, 34); color: white;" aria-label="Default select example">
+            <form action="" method="GET">
+                <select name="comp_select" onchange="this.form.submit()" class="form-select" style="background-color: rgb(34, 34, 34); color: white;" aria-label="Default select example">
                     <option value="1">1 класс</option>
                     <option value="2">2 класс</option>
                     <option value="3">3 класс</option>
@@ -72,6 +72,7 @@
                     <option value="10">10 класс</option>
                     <option value="11">11 класс</option>
                 </select><br/>
+                <!-- <input type="submit" value="Send"> -->
             </form>
             <h2 style="text-align: center;">1 класса</h2><br/>
             <div class='tables'>
