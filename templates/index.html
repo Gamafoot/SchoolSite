@@ -329,37 +329,37 @@
                     </div>
                     <div class="carousel-inner">
                     {% for i in range(data['data_t'] | length) %}
-                    {%if i == 0%}
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-4">
-                            <img src="{{url_for('static', filename=''+data['data_t'][i][2])}}">
-                            </div>
-                            <div class="col-8">
-                                <div class="discribe">
-                                    <h1>{{data['data_t'][i][0]}}</h1>
-                                    <div class="line"></div>
-                                    <p>{{data['data_t'][i][1]}}</p>
+                        {%if i == 0%}
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-4">
+                                    <img src="{{url_for('static', filename=''+data['data_t'][i][2])}}">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="discribe">
+                                            <h1>{{data['data_t'][i][0]}}</h1>
+                                            <div class="line"></div>
+                                            <p>{{data['data_t'][i][1]}}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    {%else%}
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-4">
-                            <img src="{{url_for('static', filename=''+data['data_t'][i][2])}}">
-                            </div>
-                            <div class="col-8">
-                                <div class="discribe">
-                                    <h1>{{data['data_t'][i][0]}}</h1>
-                                    <div class="line"></div>
-                                    <p>{{data['data_t'][i][1]}}</p>
+                        {%else%}
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-4">
+                                    <img src="{{url_for('static', filename=''+data['data_t'][i][2])}}">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="discribe">
+                                            <h1>{{data['data_t'][i][0]}}</h1>
+                                            <div class="line"></div>
+                                            <p>{{data['data_t'][i][1]}}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    {%endif%}
+                        {%endif%}
                     {% endfor %}
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
