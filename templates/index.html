@@ -74,7 +74,7 @@
                 </select><br/>
                 <!-- <input type="submit" value="Send"> -->
             </form>
-            <h2 style="text-align: center;">1 класса</h2><br/>
+            <h2 style="text-align: center;">{{data['class']}} класса</h2><br/>
             <div class='tables'>
                 <div class="row">
                     <div class="col-6">
@@ -319,25 +319,48 @@
             <div class="block-about">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
                     <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    {% for i in range(data['data_t'] | length)%}
+                        {%if i == 0%}
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{i}}" class="active" aria-current="true" aria-label="Slide {{i+1}}"></button>
+                        {%else%}
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{i}}"aria-label="Slide {{i+1}}"></button>
+                        {%endif%}
+                    {%endfor%}
                     </div>
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
+                    {% for i in range(data['data_t'] | length) %}
+                    {%if i == 0%}
+                    <div class="carousel-item active">
                         <div class="row">
                             <div class="col-4">
-                            <img src="{{url_for('static', filename='img/teachers/01.jpg')}}">
+                            <img src="{{url_for('static', filename=''+data['data_t'][i][2])}}">
                             </div>
                             <div class="col-8">
                                 <div class="discribe">
-                                    <h1>Шитикова Людмила Юрьевна</h1>
+                                    <h1>{{data['data_t'][i][0]}}</h1>
                                     <div class="line"></div>
-                                    <p>Директор МБОУ СОШ №9, учитель русского языка и литературы высшей категории. Отличник образования Республики Саха(Якутия), призер районного конкурса "Учитель золотого Алдана" - 1998 года, дипломант межрайонных педагогических чтений, дипломант Всероссийского конкурса методических разработок "Магистр". Под руководством Людмилы Юрьевны образовательная организация является муниципальной образовательной площадкой по различным направлениям, учащиеся школы и педагоги  - призерами и победителями районных смотров и конкурсов.</p>
+                                    <p>{{data['data_t'][i][1]}}</p>
                                 </div>
                             </div>
                         </div>
-                      </div>
+                    </div>
+                    {%else%}
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-4">
+                            <img src="{{url_for('static', filename=''+data['data_t'][i][2])}}">
+                            </div>
+                            <div class="col-8">
+                                <div class="discribe">
+                                    <h1>{{data['data_t'][i][0]}}</h1>
+                                    <div class="line"></div>
+                                    <p>{{data['data_t'][i][1]}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {%endif%}
+                    {% endfor %}
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>

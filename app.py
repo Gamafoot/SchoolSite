@@ -1,25 +1,35 @@
 from flask import Flask, render_template, request
-import sqlite3 as sql
+import sqlite3
 
 app = Flask(__name__)
 app.config.from_object(__name__)
 
-conn = sql.connect('db.sqlite3')
-conn.cursor().execute('SELECT * FROM teachers')
-data = conn.cursor().fetchall()
-print('ДАТАААААА',data)
+def execute(sql, all = True):
+    conn = sqlite3.connect('db.sqlite3', check_same_thread=False)
+    cur = conn.cursor()
+    cur.execute('SELECT fio, text, photo FROM teachers')
+
+    if all == True:
+        data = cur.fetchall()
+    else:
+        data = cur.fetchone()
+
+    conn.close()
+    return data
 
 @app.route('/', methods=['POST', 'GET'])
 def main():
+    number = '1'
     if request.method == 'POST':
         number = request.form['comp_select']
     
     #----------------------------------------#
-
+    data_teachers = execute('SELECT fio, discription, photo FROM teachers')
+    print(data_teachers)
     data = {
-        # 'class': number,
+        'class': number,
+        'data_t': data_teachers,
     }
-    return render_template('index.html')
-
+    return render_template('index.html', data = data)
 if __name__ == '__main__':
     app.run(debug=True)
