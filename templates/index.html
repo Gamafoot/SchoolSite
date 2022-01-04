@@ -55,10 +55,10 @@
         <div class="overlay"></div>
     </header>
 
-    <section id="tables" style="height: 830px;overflow: auto; background-color: rgb(37, 37, 37);">
+    <section id="tables" style="height: 830px; background-color: rgb(37, 37, 37);">
         <br/><div class="container">
             <h1 style="text-align: center;">Рассписание</h1><br/>
-            <form action="" method="GET">
+            <form action="#tables" method="POST">
                 <select name="comp_select" onchange="this.form.submit()" class="form-select" style="background-color: rgb(34, 34, 34); color: white;" aria-label="Default select example">
                     <option value="1">1 класс</option>
                     <option value="2">2 класс</option>
@@ -225,42 +225,42 @@
             <div class="row">
                 <div class="col-4">
                     <div class="circleda">
-                        <img src="{{url_for('static', filename='img/иконки/group.png')}}">
+                        <img src="{{url_for('static', filename='img/icons/group.png')}}">
                     </div>
                     <h3 style="text-align: center;">Доска почёта</h3>
                     <p style="text-align: center;">Иченики которые учатся</p>
                 </div>
                 <div class="col-4">
                     <div class="circleda">
-                        <img src="{{url_for('static', filename='img/иконки/group.png')}}">
+                        <img src="{{url_for('static', filename='img/icons/group.png')}}">
                     </div>
                     <h3 style="text-align: center;">Доска почёта</h3>
                     <p style="text-align: center;">Иченики которые учатся</p>
                 </div>
                 <div class="col-4">
                     <div class="circleda">
-                        <img src="{{url_for('static', filename='img/иконки/group.png')}}">
+                        <img src="{{url_for('static', filename='img/icons/group.png')}}">
                     </div>
                     <h3 style="text-align: center;">Доска почёта</h3>
                     <p style="text-align: center;">Иченики которые учатся</p>
                 </div>
                 <div class="col-4">
                     <div class="circleda">
-                        <img src="{{url_for('static', filename='img/иконки/group.png')}}">
+                        <img src="{{url_for('static', filename='img/icons/group.png')}}">
                     </div>
                     <h3 style="text-align: center;">Доска почёта</h3>
                     <p style="text-align: center;">Иченики которые учатся</p>
                 </div>
                 <div class="col-4">
                     <div class="circleda">
-                        <img src="{{url_for('static', filename='img/иконки/group.png')}}">
+                        <img src="{{url_for('static', filename='img/icons/group.png')}}">
                     </div>
                     <h3 style="text-align: center;">Доска почёта</h3>
                     <p style="text-align: center;">Иченики которые учатся</p>
                 </div>
                 <div class="col-4">
                     <div class="circleda">
-                        <img src="{{url_for('static', filename='img/иконки/group.png')}}">
+                        <img src="{{url_for('static', filename='img/icons/group.png')}}">
                     </div>
                     <h3 style="text-align: center;">Доска почёта</h3>
                     <p style="text-align: center;">Иченики которые учатся</p>
@@ -327,35 +327,7 @@
                       <div class="carousel-item active">
                         <div class="row">
                             <div class="col-4">
-                            <img src="{{url_for('static', filename='img/учителя/01.jpg')}}">
-                            </div>
-                            <div class="col-8">
-                                <div class="discribe">
-                                    <h1>Шитикова Людмила Юрьевна</h1>
-                                    <div class="line"></div>
-                                    <p>Директор МБОУ СОШ №9, учитель русского языка и литературы высшей категории. Отличник образования Республики Саха(Якутия), призер районного конкурса "Учитель золотого Алдана" - 1998 года, дипломант межрайонных педагогических чтений, дипломант Всероссийского конкурса методических разработок "Магистр". Под руководством Людмилы Юрьевны образовательная организация является муниципальной образовательной площадкой по различным направлениям, учащиеся школы и педагоги  - призерами и победителями районных смотров и конкурсов.</p>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-4">
-                            <img src="{{url_for('static', filename='img/учителя/01.jpg')}}">
-                            </div>
-                            <div class="col-8">
-                                <div class="discribe">
-                                    <h1>Шитикова Людмила Юрьевна</h1>
-                                    <div class="line"></div>
-                                    <p>Директор МБОУ СОШ №9, учитель русского языка и литературы высшей категории. Отличник образования Республики Саха(Якутия), призер районного конкурса "Учитель золотого Алдана" - 1998 года, дипломант межрайонных педагогических чтений, дипломант Всероссийского конкурса методических разработок "Магистр". Под руководством Людмилы Юрьевны образовательная организация является муниципальной образовательной площадкой по различным направлениям, учащиеся школы и педагоги  - призерами и победителями районных смотров и конкурсов.</p>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-4">
-                            <img src="{{url_for('static', filename='img/учителя/01.jpg')}}">
+                            <img src="{{url_for('static', filename='img/teachers/01.jpg')}}">
                             </div>
                             <div class="col-8">
                                 <div class="discribe">
@@ -402,10 +374,10 @@
                     </div>
                     <div id="social" style="margin-left: 20px;">
                         <h5>Мы с социальных сетях</h5>
-                        <a href="https://vk.com/share.php?url=https%3A%2F%2Fschool-9.saha.eduru.ru%2Fkontakti&title=%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F%20%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%88%D0%BA%D0%BE%D0%BB%D0%B0%20%E2%84%96%209%20%7C%20%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B&utm_source=share2"><img src="{{url_for('static', filename='img/иконки/vk.png')}}"></a>
-                        <a href="https://www.instagram.com/school9_aldan/"> <img src="{{url_for('static', filename='img/иконки/instagram.png')}}"></a>
-                        <a href="https://www.facebook.com/sharer.php?src=sp&u=https%3A%2F%2Fschool-9.saha.eduru.ru%2Fkontakti&title=%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F%20%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%88%D0%BA%D0%BE%D0%BB%D0%B0%20%E2%84%96%209%20%7C%20%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B&utm_source=share2"> <img src="{{url_for('static', filename='img/иконки/facebook.png')}}"></a>
-                        <a href="https://twitter.com/intent/tweet?text=%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F%20%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%88%D0%BA%D0%BE%D0%BB%D0%B0%20%E2%84%96%209%20%7C%20%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B&url=https%3A%2F%2Fschool-9.saha.eduru.ru%2Fkontakti&utm_source=share2"> <img src="{{url_for('static', filename='img/иконки/twitter.png')}}"></a>
+                        <a href="https://vk.com/share.php?url=https%3A%2F%2Fschool-9.saha.eduru.ru%2Fkontakti&title=%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F%20%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%88%D0%BA%D0%BE%D0%BB%D0%B0%20%E2%84%96%209%20%7C%20%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B&utm_source=share2"><img src="{{url_for('static', filename='img/icons/vk.png')}}"></a>
+                        <a href="https://www.instagram.com/school9_aldan/"> <img src="{{url_for('static', filename='img/icons/instagram.png')}}"></a>
+                        <a href="https://www.facebook.com/sharer.php?src=sp&u=https%3A%2F%2Fschool-9.saha.eduru.ru%2Fkontakti&title=%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F%20%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%88%D0%BA%D0%BE%D0%BB%D0%B0%20%E2%84%96%209%20%7C%20%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B&utm_source=share2"> <img src="{{url_for('static', filename='img/icons/facebook.png')}}"></a>
+                        <a href="https://twitter.com/intent/tweet?text=%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F%20%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%88%D0%BA%D0%BE%D0%BB%D0%B0%20%E2%84%96%209%20%7C%20%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B&url=https%3A%2F%2Fschool-9.saha.eduru.ru%2Fkontakti&utm_source=share2"> <img src="{{url_for('static', filename='img/icons/twitter.png')}}"></a>
                     </div>
                 </div>
             </div>
