@@ -31,5 +31,13 @@ def main():
         'data_t': data_teachers,
     }
     return render_template('index.html', data = data)
+
+@app.route('/news')
+def news():
+    return render_template('news.html')
+
+@app.route('/news-detail-<num>')
+def detail(num):
+    return render_template('detail.html')
 if __name__ == '__main__':
     app.run(debug=True)

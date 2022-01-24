@@ -4,6 +4,10 @@ nav {
     height: 70px;
 }
 
+nav ul{
+    margin: 0;
+}
+
 nav li{
     list-style-type: none;
 }

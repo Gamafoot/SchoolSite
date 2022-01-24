@@ -28,16 +28,14 @@
 
 <body>
     <nav>
-        <div class="a">
         <ul id="nav">
             <li><a href="#about">О нас</a></li>
-            <li><a href="#news">Новости</a></li>
+            <li><a href="/news">Новости</a></li>
             <li><a href="#">Галерея</a></li>
             <li><a href="#achiv">Достижения</a></li>
             <li><a href="#tables">Рассписание</a></li>
             <li><a href="#contact">Контакты</a></li>
         </ul>
-        </div>
     </nav>
 
     <header>
@@ -276,7 +274,7 @@
                 <div class="col-lg-4">
                     <div class="card_" style="width: 18rem;">
                         <div class="card-img">
-                            <img src="{{url_for('static', filename='img/Новости/точка роста/03.jpg')}}" class="card-img-top">
+                            <img src="{{url_for('static', filename='img/news/точка роста/03.jpg')}}" class="card-img-top">
                         </div> 
                         <div class="card-body">
                         <h5 class="card-title">Точка роста</h5>
@@ -288,7 +286,7 @@
                 <div class="col-lg-4">
                     <div class="card_" style="width: 18rem;">
                         <div class="card-img">
-                            <img src="{{url_for('static', filename='img/Новости/точка роста/03.jpg')}}" class="card-img-top">
+                            <img src="{{url_for('static', filename='img/news/точка роста/03.jpg')}}" class="card-img-top">
                         </div> 
                         <div class="card-body">
                         <h5 class="card-title">Точка роста</h5>
@@ -300,7 +298,7 @@
                 <div class="col-lg-4">
                     <div class="card_" style="width: 18rem;">
                         <div class="card-img">
-                            <img src="{{url_for('static', filename='img/Новости/точка роста/03.jpg')}}" class="card-img-top">
+                            <img src="{{url_for('static', filename='img/news/точка роста/03.jpg')}}" class="card-img-top">
                         </div> 
                         <div class="card-body">
                         <h5 class="card-title">Точка роста</h5>
@@ -309,7 +307,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn" id="btn-news" style="color:white;">Все новости</button>
+                <button type="submit" class="btn" id="btn-news" onclick="location='/news'" style="color:white;">Все новости</button>
         </div>
     </section>
 

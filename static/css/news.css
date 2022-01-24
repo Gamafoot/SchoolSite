@@ -32,7 +32,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 1;
 }
 
 .block-img h3:hover{
@@ -84,7 +83,7 @@
 #btn-news{
     width: 200px;
     margin: 0 auto;
-    background-color: rgb(53, 126, 53);
+    background-color: rgb(68, 163, 68);
     transform: scale(1);
     margin-top: 40px;
     font-size: 1.3rem;
@@ -94,5 +93,5 @@
 
 #btn-news:hover{
     transform: scale(1.05);
-    box-shadow: 0px 0px 10px rgb(53, 126, 53);
+    box-shadow: 0px 0px 10px rgb(68, 163, 68);
 }
