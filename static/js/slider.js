@@ -1,8 +1,16 @@
-new Swiper('.swiper-container',{
-    slidesPerView: 2,
-    spaceBetween: 100,
-    navigation:{
-        nextEl:'swiper-button-next',
-        prevEl:'swiper-button-prev',
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 3,
+    slidesPerGroup: 1,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
-});
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });

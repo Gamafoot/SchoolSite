@@ -119,32 +119,37 @@
     <section id="about">
         <div class="container">
             <h1 id="header-about">Информация о нас</h1>
-            <div class="panel">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        {%for i in range(6)%}
-                        <div class="swiper-slider">
-                            <img src="">
-                            <!-- <div class="photo-teacher">
-                                <style>
-                                    .photo-teacher{
-                                        background-image: url("{{url_for('static', filename='img/teachers/01.jpg')}}");
-                                    }
-                                </style>
-                                <div class="overlay">
-                                    <div class="discribe">
-                                        <h5>Lorem, ipsum dolor.</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aut ratione porro quos doloribus in, numquam laborum provident autem! Esse asperiores dolorum omnis quam, amet eum praesentium quaerat nesciunt dolore. Illum porro iure assumenda esse reiciendis.</p>
-                                        <a href="">Подробнее</a>
-                                    </div>
-                                </div>
-                            </div> -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  {%for i in range(data['data_t']|length)%}
+                  <div class="swiper-slide">
+                      <div class="photo-teacher">
+                          <style>
+                            .photo-teacher{
+                                background-image: url("{{url_for('static', filename=''+data['data_t'][i][2])}}");
+                            }
+                        </style>
+                        <div class="overlay">
+                            <div class="discribe">
+                                <h5>{{data['data_t'][i][0]}}</h5>
+                                <p>{{data['data_t'][i][1]}}</p>
+                                <a href="">Подробнее</a>
+                            </div>
                         </div>
-                        {%endfor%}
                     </div>
                 </div>
+                {%endfor%}
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
+            </div>
+            <div class="panel">
             </div>
         </div>
     </section>
