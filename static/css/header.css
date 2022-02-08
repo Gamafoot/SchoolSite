@@ -1,4 +1,4 @@
-@media screen and (max-height: 1080px){
+@media screen and (max-width: 1920px) {
     header{
         height: 910px;
         position: relative;
@@ -10,26 +10,10 @@
         background-attachment: fixed;
         background-blend-mode: multiply;
     }
-}
 
-@media screen and (max-height: 720px){
-    header{
-        height: 700px;
-        position: relative;
-        background-color: rgba(0, 0, 0, 0.465);
-        background-image: url("../img/school.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin: 0;
-        background-attachment: fixed;
-        background-blend-mode: multiply;
-    }
-}
-
-@media screen and (max-width: 1920px) {
     .header-content{
         height: 354px;
-        position: relative;
+        position: absolute;
         top: 50%;
         transform: translate(0, -50%);
         color: white;
@@ -37,7 +21,7 @@
         z-index: 1;
         text-align: center;
     }
-
+    
     .header-content h1{
         font-size: 50px;
         font-weight: 700;
@@ -76,9 +60,21 @@
 }
 
 @media screen and (max-width: 1280px) {
+    header{
+        height: 700px;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.465);
+        background-image: url("../img/school.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+    }
+
     .header-content{
         height: 354px;
-        position: relative;
+        position: absolute;
         top: 50%;
         transform: translate(0, -50%);
         color: white;

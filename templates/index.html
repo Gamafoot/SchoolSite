@@ -38,13 +38,11 @@
 
     <header>
         <div class="container">
-            <div class="row">
-                <div class="header-content">
-                    <h1>СРЕДНЯЯ ОБЩЕОБРАЗОВАТЕЛЬНАЯ ШКОЛА № 9</h1>
-                    <h2 style="color:rgb(68, 163, 68);">_ _ _ _ _ _ _ _ _ _ _ _ _ _</h2>
-                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sapiente cum eaque! Provident iusto nisi excepturi tempore vel velit. Reprehenderit praesentium reiciendis aperiam? Alias illo pariatur voluptate modi. Dolores, dicta.</h4>
-                    <button class="btn-main" style="color:white;" onclick="location.href = '#tables'">Узнать больше</button>
-                </div>
+            <div class="header-content">
+                <h1>СРЕДНЯЯ ОБЩЕОБРАЗОВАТЕЛЬНАЯ ШКОЛА № 9</h1>
+                <h2 style="color:rgb(68, 163, 68);">_ _ _ _ _ _ _ _ _ _ _ _ _ _</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sapiente cum eaque! Provident iusto nisi excepturi tempore vel velit. Reprehenderit praesentium reiciendis aperiam? Alias illo pariatur voluptate modi. Dolores, dicta.</h4>
+                <button class="btn-main" style="color:white;" onclick="location.href = '#news'">Узнать больше</button>
             </div>
         </div>
 
@@ -53,50 +51,17 @@
 
     <section id="info-block">
         <div class="container">
-            <h1 style="text-align: center;">Наши достижения</h1><br/>
+            <h1 style="text-align: center;">Инфо-блок</h1><br/>
             <div class="row">
-                <div class="col-4">
-                    <div class="circleda">
+                {%for i in range(8)%}
+                <div class="col-3">
+                    <div class="own-circle">
                         <img src="{{url_for('static', filename='img/icons/group.png')}}">
                     </div>
                     <h3 style="text-align: center;">Доска почёта</h3>
                     <p style="text-align: center;">ученики которые учатся</p>
                 </div>
-                <div class="col-4">
-                    <div class="circleda">
-                        <img src="{{url_for('static', filename='img/icons/galleryw.png')}}">
-                    </div>
-                    <h3 style="text-align: center;">Галерея</h3>
-                    <p style="text-align: center;">фотографии школы</p>
-                </div>
-                <div class="col-4">
-                    <div class="circleda">
-                        <img src="{{url_for('static', filename='img/icons/achivments.png')}}">
-                    </div>
-                    <h3 style="text-align: center;">Наши достижения</h3>
-                    <p style="text-align: center;">достижения школы</p>
-                </div>
-                <div class="col-4">
-                    <div class="circleda">
-                        <img src="{{url_for('static', filename='img/icons/group.png')}}">
-                    </div>
-                    <h3 style="text-align: center;">Доска почёта</h3>
-                    <p style="text-align: center;">Иченики которые учатся</p>
-                </div>
-                <div class="col-4">
-                    <div class="circleda">
-                        <img src="{{url_for('static', filename='img/icons/group.png')}}">
-                    </div>
-                    <h3 style="text-align: center;">Доска почёта</h3>
-                    <p style="text-align: center;">Иченики которые учатся</p>
-                </div>
-                <div class="col-4">
-                    <div class="circleda">
-                        <img src="{{url_for('static', filename='img/icons/group.png')}}">
-                    </div>
-                    <h3 style="text-align: center;">Доска почёта</h3>
-                    <p style="text-align: center;">Иченики которые учатся</p>
-                </div>
+                {%endfor%}
             </div>
         </div>
     </section>
@@ -117,32 +82,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card_" style="width: 18rem;">
-                        <div class="card-img">
-                            <img src="{{url_for('static', filename='img/news/точка роста/03.jpg')}}" class="card-img-top">
-                        </div> 
-                        <div class="card-body">
-                        <h5 class="card-title">Точка роста</h5>
-                        <p class="card-text">специальные образовательные центры, создаваемые на базе школ в селах и малых городах. Их открытие предусмотрено федеральным проектом ...</p>
-                        <a href="#" class="btn" style="background-color: rgb(68, 163, 68); color:white;">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card_" style="width: 18rem;">
-                        <div class="card-img">
-                            <img src="{{url_for('static', filename='img/news/точка роста/03.jpg')}}" class="card-img-top">
-                        </div> 
-                        <div class="card-body">
-                        <h5 class="card-title">Точка роста</h5>
-                        <p class="card-text">специальные образовательные центры, создаваемые на базе школ в селах и малых городах. Их открытие предусмотрено федеральным проектом ...</p>
-                        <a href="#" class="btn" style="background-color: rgb(68, 163, 68); color:white;">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-                <button type="submit" class="btn" id="btn-news" onclick="location='/news'" style="color:white;">Все новости</button>
+                <button type="button" class="btn" id="btn-news" onclick="location='/news'" style="color:white;">Все новости</button>
+            </div>
         </div>
+        
+        <style>
+            #news{
+                background-image: url("{{url_for('static',filename='img/news/точка роста/01.jpg')}}");
+            }
+        </style>
     </section>
 
     <section id="about">
