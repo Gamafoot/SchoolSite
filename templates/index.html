@@ -123,23 +123,29 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                   <!-- Slides -->
-                  {%for i in range(data['data_t']|length)%}
-                  <div class="swiper-slide">
-                      <div class="photo-teacher">
-                          <style>
-                            .photo-teacher{
-                                background-image: url("{{url_for('static', filename=''+data['data_t'][i][2])}}");
-                            }
-                        </style>
-                        <div class="overlay">
-                            <div class="discribe">
-                                <h5>{{data['data_t'][i][0]}}</h5>
-                                <p>{{data['data_t'][i][1][:200]|capitalize}}...</p>
-                                <a href="">Подробнее</a>
+                {%for i in range(data['data_t']|length)%}
+                    <div class="swiper-slide">
+                        <div class="photo-teacher">
+                            <div id="teacher{{i}}">
+                                <style>
+                                    #teacher{{i}}{
+                                        background-image: url("{{url_for('static', filename=''+data['data_t'][i][2])}}");
+                                        background-size: cover;  
+                                        width: inherit;
+                                        height: inherit;
+                                        border-radius: 10px;
+                                    }
+                                </style>
+                                <div class="overlay">
+                                    <div class="discribe">
+                                        <h5>{{data['data_t'][i][0]}}</h5>
+                                        <p>{{data['data_t'][i][1][:200]|capitalize}}...</p>
+                                        <a href="">Подробнее</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 {%endfor%}
                 </div>
                 <!-- If we need pagination -->
