@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/navbar.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/header.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/info-block.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/navigation-block.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/news.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/contact.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
@@ -54,26 +54,35 @@
         <!-- <div class="overlay"></div> -->
     </header>
 
-    <section id="info-block">
+    <section id="navigation-block">
+        <div class="free-space"></div>
+
         <div class="container">
-            <h1 style="text-align: center;">Инфо-блок</h1><br/>
+            <div id="header-navigation">
+                <h1>Навигационный блок</h1>
+            </div>
+            <div class="indent-header"></div>
             <div class="row">
                 {%for i in range(8)%}
                 <div class="col-3">
-                    <div class="own-circle">
-                        <img src="{{url_for('static', filename='img/icons/group.png')}}">
+                    <div class="">
+                        <div class="own-circle">
+                            <img src="{{url_for('static', filename='img/icons/group.png')}}">
+                        </div>
+                        <h3 style="text-align: center;">Доска почёта</h3>
+                        <p style="text-align: center;">ученики которые учатся</p>
                     </div>
-                    <h3 style="text-align: center;">Доска почёта</h3>
-                    <p style="text-align: center;">ученики которые учатся</p>
                 </div>
                 {%endfor%}
             </div>
         </div>
+
+        <div class="free-space"></div>
     </section>
 
     <section id="news">
         <div class="container">
-            <br/><h1 style="text-align: center;">Новости школы</h1><br/>
+            <h1 id="header-news">Новости школы</h1>
             <div class="row">
                 {%for i in range(3)%}
                 <div class="col-lg-4">
@@ -94,7 +103,7 @@
                 </div>
                 {%endfor%}
             </div>
-            <div class="fs-top"></div>
+            <div class="free-space"></div>
         </div>
 
         <style>
@@ -106,62 +115,16 @@
 
     <section id="about">
         <div class="container">
-            <h1 style="text-align: center;" id="h1">Информация о нас</h1>
-            <div class="block-about">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                    <div class="carousel-indicators">
-                    {% for i in range(data['data_t'] | length)%}
-                        {%if i == 0%}
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{i}}" class="active" aria-current="true" aria-label="Slide {{i+1}}"></button>
-                        {%else%}
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{i}}"aria-label="Slide {{i+1}}"></button>
-                        {%endif%}
-                    {%endfor%}
+            <h1 id="header-about">Информация о нас</h1>
+            <div class="panel">
+                <div>
+                    <img src="{{url_for('static', filename='img/teachers/01.jpg')}}">
+                    <div class="discribe">
+                        <h1>Lorem, ipsum dolor.</h1>
+                        <div class="line"></div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aut ratione porro quos doloribus in, numquam laborum provident autem! Esse asperiores dolorum omnis quam, amet eum praesentium quaerat nesciunt dolore. Illum porro iure assumenda esse reiciendis.</p>
                     </div>
-                    <div class="carousel-inner">
-                    {% for i in range(data['data_t'] | length) %}
-                        {%if i == 0%}
-                            <div class="carousel-item active">
-                                <div class="row">
-                                    <div class="col-4">
-                                    <img src="{{url_for('static', filename=''+data['data_t'][i][2])}}">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="discribe">
-                                            <h1>{{data['data_t'][i][0]}}</h1>
-                                            <div class="line"></div>
-                                            <p>{{data['data_t'][i][1]}}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        {%else%}
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-4">
-                                    <img src="{{url_for('static', filename=''+data['data_t'][i][2])}}">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="discribe">
-                                            <h1>{{data['data_t'][i][0]}}</h1>
-                                            <div class="line"></div>
-                                            <p>{{data['data_t'][i][1]}}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        {%endif%}
-                    {% endfor %}
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
+                </div>
             </div>
         </div>
     </section>

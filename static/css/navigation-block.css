@@ -1,16 +1,23 @@
-#info-block{
+#navigation-block{
     background-color: rgb(78, 179, 78);
     width: 100%;
     min-height: 650px;
-    /* box-shadow: 0 0 100px rgb(78, 179, 78); */
 }
 
-#header-ib{
+#header-navigation{
+    display: block;
+    width: 510px;
+    margin: 0 auto;
+}
+
+#header-navigation h1{
     margin-bottom: 30px;
+    color: white;
+    text-align: center;
     transition: all 0.2s ease-in-out;
 }
 
-#header-ib:hover{
+#header-navigation h1:hover{
     text-shadow: 0px 0px 5px white;
 }
 
