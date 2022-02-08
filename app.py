@@ -25,11 +25,14 @@ def main():
     
     #----------------------------------------#
     data_teachers = execute('SELECT fio, discription, photo FROM teachers')
-    print(data_teachers)
+    # print(data_teachers)
     data = {
         'class': number,
         'data_t': data_teachers,
     }
+    for i in range(len(data_teachers)):
+        print(data_teachers[i][2])
+        
     return render_template('index.html', data = data)
 
 @app.route('/news')
@@ -39,5 +42,9 @@ def news():
 @app.route('/news-detail-<num>')
 def detail(num):
     return render_template('detail.html')
+
+@app.route('/test')
+def test():
+    return render_template('test.html')
 if __name__ == '__main__':
     app.run(debug=True)

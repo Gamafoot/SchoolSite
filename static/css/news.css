@@ -1,77 +1,61 @@
 #news{
-    height: 620px;
-    background-color: rgb(37, 37, 37);
+    min-height: 620px;
+    background-color: rgba(0, 0, 0, 0.465);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
 }
 
-.block{
-    width: 330px;
-    height: 350px;
-    margin-left: 50%;
-    transform: translate(-50%,0);
-    border: 3px solid #000000;
-    overflow: hidden;
-    background-color: rgb(255, 255, 255);
-    /* transition: all .8s ease; */
+#news-fs{
+    height: 100px;
+}
+
+#news h1,h2,h3,h4,h5,p{
+    color:white;
+}
+
+#header-news{
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+#header-news h1{
+    display: block;
+    width: 380px;
+    margin: 0 auto;
+    transition: all 0.2s ease-out;
+}
+#header-news h1:hover{
+    text-shadow: 0px 0px 5px white;
 }
 
 .block-img{
     width: 330px;
     height: 200px;
     position: relative;
-}
-
-.block-img h3{
-    position: absolute;
-    opacity: 1;
-    z-index: 1;
-    font-size: 40px;
-    color: white;
-    text-align: center;
-    text-shadow: 0 0 10px black;
-    transition: all 0.3s ease;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.block-img h3:hover{
-    opacity: 0;
-}
-
-.block-img{
     overflow: hidden;
-    width: 330px;
-    height: 200px;
 }
 
-.block-info h3{
-    display: block;
-    color: black;
-    z-index: 1;
-    text-align: center;
+.preview-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.news-overlay{
-    width: 325px;
-    height: 200px;
-    position: absolute;
-    background-color: black;
-    opacity: 0.4;
+.card-body{
+    backdrop-filter: blur(8px);
 }
 
-.block img{
-    width: 500px;
-}
-
-.text-info p{
-    color: black;
-    text-align: center;
-}
-
-.card_{
+.block-card{
     margin: 0 auto;
-    box-shadow: 2px 2px 10px rgb(24, 24, 24);
-    background-color: rgb(48, 48, 48);
+    box-shadow: 2px 2px 10px rgba(24, 24, 24, 0.239);
+    background-color: rgba(26, 26, 26, 0.459);
+    transition: all .2s ease-in-out;
+}
+
+.block-card:hover{
+    box-shadow: 0 0 15px rgb(95, 95, 95);
 }
 
 .card-img{
@@ -80,18 +64,8 @@
     overflow: hidden;
 }
 
-#btn-news{
-    width: 200px;
-    margin: 0 auto;
-    background-color: rgb(68, 163, 68);
-    transform: scale(1);
-    margin-top: 40px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    transition: all .3s ease;
-}
-
-#btn-news:hover{
+.news-btn:hover{
+    box-shadow: 0 0 10px rgb(68, 163, 68);
+    /* text-shadow: 0 0 10px white; */
     transform: scale(1.05);
-    box-shadow: 0px 0px 10px rgb(68, 163, 68);
 }

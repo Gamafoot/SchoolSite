@@ -1,0 +1,35 @@
+#tables{
+    min-height: 1500px;
+}
+
+.block-tables{
+    display: flex;
+    flex-wrap:wrap;
+    border: 0;
+    max-height: 2000px;
+}
+
+th{
+    background-color: black;
+}
+
+/* tbody{
+    max-width: 600px;
+    margin: 0;
+    border: 2px solid black;
+    margin: 10px 10px;
+}
+
+td{
+    max-width: 400px;
+    border-top: 0;
+} */
+
+.flex-block-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-block-buttons input{
+    height: 50px;
+}

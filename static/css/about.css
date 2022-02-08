@@ -1,28 +1,101 @@
 #about{
     width: 100%;
-    height: 700px;
-    background-color: rgb(46, 46, 46);
+    min-height: 700px;
+    background-color: rgba(0, 0, 0, 0.465);
+    background-image: url("../img/bg-about.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
 }
 
-#h1{
+#header-about{
     padding:40px 0;
+    text-align: center;
+    color: white;
 }
 
-.block-about{
-    background-color: rgb(36, 36, 36);
+.panel{
+    min-height: 400px;
+    background-color: rgba(36, 36, 36, 0.397);
+    backdrop-filter: blur(8px);
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.block-about img{
+.block-teachers{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.card-body-teacher{
     width: 300px;
-    margin: 20px;
-    border: 10px solid rgb(65, 65, 65);
+    height: 500px;
 }
 
-.discribe{
-    width: 600px;
-    margin-top: 20px;
+.photo-teacher{
+    width: 300px;
+    height: 400px;
+    margin: 50px 0;
+    background-size: cover;
+    border-radius: 10px;
 }
 
+
+.overlay{
+    width: inherit;
+    height: inherit;
+    transition: all .2s ease-in-out;
+}
+
+.overlay-hover{
+    background-color: rgba(0, 0, 0, 0.575);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+}
+
+.discribe-p{
+    width: 250px;
+    margin: 0 auto;
+}
+
+
 .discribe{
-    font-size: 1.15rem;
+    width: inherit;
+    padding-top: 20px;
+    opacity: 0;
+}
+
+.discribe-hover{
+    transition: all .3s ease-in-out;
+    opacity: 1;
+}
+
+.discribe h5, p{
+    text-align: center;
+    color: white;
+}
+
+.discribe p{
+    /* padding-top: 10px; */
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.discribe a{
+    text-align: center;
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.btn-scrol{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    width: 40px;
+    height: 70px;
+    margin: 0 auto;
 }

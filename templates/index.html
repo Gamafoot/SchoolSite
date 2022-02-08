@@ -9,13 +9,11 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/navbar.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/header.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/achiv.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/info-block.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/news.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/contact.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/about.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/bt-teachers.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
     <link rel="shortcut icon" href="{{url_for('static', filename='img/school.png')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- FONTS -->
@@ -50,174 +48,10 @@
             </div>
         </div>
 
-        <div class="overlay"></div>
+        <!-- <div class="overlay"></div> -->
     </header>
 
-    <section id="tables" style="height: 830px; background-color: rgb(37, 37, 37);">
-        <br/><div class="container">
-            <h1 style="text-align: center;">Рассписание</h1><br/>
-            <form action="#tables" method="POST">
-                <select name="comp_select" onchange="this.form.submit()" class="form-select" style="background-color: rgb(34, 34, 34); color: white;" aria-label="Default select example">
-                    <option value="1">1 класс</option>
-                    <option value="2">2 класс</option>
-                    <option value="3">3 класс</option>
-                    <option value="4">4 класс</option>
-                    <option value="5">5 класс</option>
-                    <option value="6">6 класс</option>
-                    <option value="7">7 класс</option>
-                    <option value="8">8 класс</option>
-                    <option value="9">9 класс</option>
-                    <option value="10">10 класс</option>
-                    <option value="11">11 класс</option>
-                </select><br/>
-                <!-- <input type="submit" value="Send"> -->
-            </form>
-            <h2 style="text-align: center;">{{data['class']}} класса</h2><br/>
-            <div class='tables'>
-                <div class="row">
-                    <div class="col-6">
-                        <table id="sas" class="table table-bordered" style="color: white">
-                            <thead>
-                                <tr>
-                                    <th style="text-align: center;" colspan="3">Понедельник</th>
-                                </tr>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Предмет</th>
-                                    <th scope="col">Домашнее задание</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Математика</td>
-                                    <td>Отсутствует</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Обществознание</td>
-                                    <td>Отсутствует</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-bordered" style="color: white">
-                            <thead>
-                                <tr>
-                                    <th style="text-align: center" colspan="3">Вторник</th>
-                                </tr>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Предмет</th>
-                                    <th scope="col">Домашнее задание</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Математика</td>
-                                    <td>Отсутствует</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Обществознание</td>
-                                    <td>Отсутствует</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-bordered" style="color: white">
-                            <thead>
-                                <tr>
-                                    <th style="text-align: center" colspan="3">Среда</th>
-                                </tr>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Предмет</th>
-                                    <th scope="col">Домашнее задание</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Математика</td>
-                                    <td>Отсутствует</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Обществознание</td>
-                                    <td>Отсутствует</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="col-6">
-                        <table class="table table-bordered" style="color: white">
-                            <thead>
-                                <tr>
-                                    <th style="text-align: center;" colspan="3">Четверг</th>
-                                </tr>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Предмет</th>
-                                    <th scope="col">Домашнее задание</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Математика</td>
-                                    <td>Отсутствует</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Обществознание</td>
-                                    <td>Отсутствует</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-bordered" style="color: white">
-                            <thead>
-                                <tr>
-                                    <th style="text-align: center" colspan="3">Пятница</th>
-                                </tr>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Предмет</th>
-                                    <th scope="col">Домашнее задание</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Математика</td>
-                                    <td>Отсутствует</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Обществознание</td>
-                                    <td>Отсутствует</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-bordered" style="color: white">
-                            <thead>
-                                <tr>
-                                    <th style="text-align: center" colspan="3">Суббота</th>
-                                </tr>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Предмет</th>
-                                    <th scope="col">Домашнее задание</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <section id="achiv">
+    <section id="info-block">
         <div class="container">
             <h1 style="text-align: center;">Наши достижения</h1><br/>
             <div class="row">
