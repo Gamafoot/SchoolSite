@@ -43,29 +43,43 @@
     object-fit: cover;
 }
 
-.card-body{
-    backdrop-filter: blur(8px);
-}
-
-.block-card{
+.card-news{
     margin: 0 auto;
+    width: 350px;
     box-shadow: 2px 2px 10px rgba(24, 24, 24, 0.239);
     background-color: rgba(26, 26, 26, 0.459);
     transition: all .2s ease-in-out;
 }
 
-.block-card:hover{
+.card-news:hover{
     box-shadow: 0 0 15px rgb(95, 95, 95);
 }
+
+.card-body{
+    backdrop-filter: blur(8px);
+}
+
 
 .card-img{
     height: 170px;
     position: relative;
     overflow: hidden;
+    background-size: cover;
 }
 
-.news-btn:hover{
+.card-text{
+    font-weight: 300px;
+}
+
+
+.btn-more{
+    background-color: rgb(68, 163, 68);
+    color:white;
+    transition: all .2s ease-in-out;
+}
+
+.btn-more:hover{
     box-shadow: 0 0 10px rgb(68, 163, 68);
-    /* text-shadow: 0 0 10px white; */
     transform: scale(1.05);
+    color:white;
 }
