@@ -42,12 +42,12 @@
     width: inherit;
     height: inherit;
     transition: all .2s ease-in-out;
+    border-radius: 10px;
 }
 
 .overlay-hover{
     background-color: rgba(0, 0, 0, 0.575);
     backdrop-filter: blur(3px);
-    border-radius: 10px;
 }
 
 
@@ -78,4 +78,10 @@
     display: block;
     width: 200px;
     margin: 0 auto;
+}
+
+.active-bullet{
+    transform: scale(1.3);
+    background-color: white;
+    opacity: 1;
 }
