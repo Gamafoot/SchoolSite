@@ -12,7 +12,6 @@
 #header-about{
     padding:40px 0;
     text-align: center;
-    color: white;
 }
 
 .swiper{
@@ -65,10 +64,7 @@
     opacity: 1;
 }
 
-.discribe h5, p{
-    text-align: center;
-    color: white;
-}
+.discribe h5, p{text-align: center;}
 
 .discribe p{
     width: 250px;

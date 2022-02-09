@@ -1,7 +1,7 @@
 #contact{
     width: 100%;
     min-height: 600px;
-    background-color: rgb(68, 163, 68);
+    background-color: var(--green);
 }
 
 #header-contact{
@@ -9,10 +9,6 @@
     padding-bottom: 50px;
     color: white;
 }
-
-/* #block-map{
-    height: 494px;
-} */
 
 #map{
     width: 400;

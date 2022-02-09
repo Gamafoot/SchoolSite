@@ -33,17 +33,8 @@
 </head>
 
 <body>
-    <nav>
-        <ul id="nav">
-            <li><a href="#about">О нас</a></li>
-            <li><a href="/news">Новости</a></li>
-            <li><a href="#">Галерея</a></li>
-            <li><a href="#achiv">Достижения</a></li>
-            <li><a href="#tables">Рассписание</a></li>
-            <li><a href="#contact">Контакты</a></li>
-        </ul>
-    </nav>
-    
+    {%include "navbar.html"%}
+
     <header>
         <div class="container">
             <div class="header-content">
@@ -68,13 +59,11 @@
             <div class="row">
                 {%for i in range(8)%}
                 <div class="col-3">
-                    <div class="">
-                        <div class="own-circle">
-                            <img src="{{url_for('static', filename='img/icons/group.png')}}">
-                        </div>
-                        <h3 style="text-align: center;">Доска почёта</h3>
-                        <p style="text-align: center;">ученики которые учатся</p>
+                    <div class="own-circle">
+                        <img src="{{url_for('static', filename='img/icons/group.png')}}" draggable="false">
                     </div>
+                    <h3 style="text-align: center;">Доска почёта</h3>
+                    <p style="text-align: center;">ученики которые учатся</p>
                 </div>
                 {%endfor%}
             </div>
@@ -120,9 +109,7 @@
         <div class="container">
             <h1 id="header-about">Информация о нас</h1>
             <div class="swiper">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                  <!-- Slides -->
                 {%for i in range(data['data_t']|length)%}
                     <div class="swiper-slide">
                         <div class="photo-teacher">
@@ -139,7 +126,7 @@
                                 <div class="overlay">
                                     <div class="discribe">
                                         <h5>{{data['data_t'][i][0]}}</h5>
-                                        <p>{{data['data_t'][i][1][:200]|capitalize}}...</p>
+                                        <p>{{data['data_t'][i][1][:190]|capitalize}}...</p>
                                         <a href="">Подробнее</a>
                                     </div>
                                 </div>
@@ -148,14 +135,11 @@
                     </div>
                 {%endfor%}
                 </div>
-                <!-- If we need pagination -->
+
                 <div class="swiper-pagination"></div>
               
-                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-            </div>
-            <div class="panel">
             </div>
         </div>
     </section>
@@ -201,9 +185,9 @@
     </footer>
     
     <!-- Другие скрипты -->
-    <!-- Bootstrap --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
-    <!-- jQuery --><script src="{{url_for('static',filename='js/jquery-3.6.0.min.js')}}"></script> -->
-    <!-- Swiper --><script src="{{url_for('static',filename='js/swiper/swiper-bundle.js')}}"></script> -->
+    <!-- Bootstrap --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- jQuery --><script src="{{url_for('static',filename='js/jquery-3.6.0.min.js')}}"></script>
+    <!-- Swiper --><script src="{{url_for('static',filename='js/swiper/swiper-bundle.js')}}"></script>
 
     <!-- Мои скрипты -->
     <script src="{{url_for('static',filename='js/about.js')}}"></script>

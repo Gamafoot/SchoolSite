@@ -1,5 +1,5 @@
 #navigation-block{
-    background-color: rgb(78, 179, 78);
+    background-color: var(--green);
     width: 100%;
     min-height: 650px;
 }
@@ -12,26 +12,12 @@
 
 #header-navigation h1{
     margin-bottom: 30px;
-    color: white;
     text-align: center;
     transition: all 0.2s ease-in-out;
+    cursor:pointer;
 }
 
-#header-navigation h1:hover{
-    text-shadow: 0px 0px 5px white;
-}
-
-#info-block h1, h3, p{
-    color: white;
-}
-
-.block-links h3{
-    margin: 0;
-}
-
-.block-links p{
-    margin-bottom: 30px;
-}
+#header-navigation h1:hover{text-shadow: 0px 0px 5px white;}
 
 .own-circle{
     width: 140px;
@@ -43,6 +29,7 @@
     position: relative;
     margin: 0 auto;
     transition: all .2s ease-in-out;
+    cursor: pointer;
 }
 
 .own-circle:hover{
@@ -58,6 +45,4 @@
     padding: auto;
 }
 
-.offset{
-    margin-top: 30px;
-}
+.indent-height{margin: 30px 0;}

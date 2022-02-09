@@ -7,34 +7,9 @@ body{
     margin: 0;
 }
 
-#bg-white{
-    background-color: #fff;
-}
-
-.white{
-    color: #fff;
-}
-
-#bg-green{
-    background-color: var(--green);
-}
-
-.main-test-div{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction:row;
-}
-
-table{
-    border: 2px solid black;
-}
-
-
-.test-div{
-    width: 300px;
-    margin: 10px 10px;
-    height: 300px;
-    background-color: black;
+h1,h2,h3,h4,h5,p{
+    cursor: default;
+    color: white;
 }
 
 .free-space{
@@ -42,12 +17,9 @@ table{
     height: 70px;
 }
 
-.indent-header{
-    margin-bottom: 50px;
-}
+.indent-header{margin-bottom: 50px;}
 
 .text-white{color: #fff;}
-.text-black{color: black;}
 .text-center{text-align: center;}
 
 .transition-block{
