@@ -14,7 +14,6 @@
     
     <!-- Мои таблицы стилей -->
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/navbar.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/header.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/navigation-block.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/news.css')}}">
@@ -41,11 +40,9 @@
                 <h1>СРЕДНЯЯ ОБЩЕОБРАЗОВАТЕЛЬНАЯ ШКОЛА № 9</h1>
                 <h2 style="color:rgb(68, 163, 68);">_ _ _ _ _ _ _ _ _ _ _ _ _ _</h2>
                 <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sapiente cum eaque! Provident iusto nisi excepturi tempore vel velit. Reprehenderit praesentium reiciendis aperiam? Alias illo pariatur voluptate modi. Dolores, dicta.</h4>
-                <button class="btn-main" style="color:white;" onclick="location.href = '#news'">Узнать больше</button>
+                <button class="btn-main" style="color:white;" onclick="location.href = '#navigation-block'">Узнать больше</button>
             </div>
         </div>
-        
-        <!-- <div class="overlay"></div> -->
     </header>
     
     <section id="navigation-block">
@@ -87,7 +84,7 @@
                             </style>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title text-center">Точка роста</h5>
+                            <h4 class="card-title text-center">Точка роста</h4>
                             <p class="card-text">Cпециальные образовательные центры, создаваемые на базе школ в селах и малых городах. Их открытие предусмотрено федеральным проектом ...</p>
                             <a href="#" class="btn btn-more">Подробнее</a>
                         </div>
@@ -190,7 +187,8 @@
     <!-- Swiper --><script src="{{url_for('static',filename='js/swiper/swiper-bundle.js')}}"></script>
 
     <!-- Мои скрипты -->
-    <script src="{{url_for('static',filename='js/about.js')}}"></script>
     <script src="{{url_for('static',filename='js/slider.js')}}"></script>
+    <script src="{{url_for('static',filename='js/about.js')}}"></script>
+    <!-- <script src="{{url_for('static',filename='js/news.js')}}"></script> -->
 </body>
 </html>

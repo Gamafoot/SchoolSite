@@ -58,8 +58,16 @@
 
 .card-body{
     backdrop-filter: blur(8px);
+    padding: 10px 20px 20px 20px;
 }
 
+.card-title{
+    transform: scale(1);
+}
+.card-title-hover{
+    transition: all .5 ease-in-out;
+    transform: scale(1.1);
+}
 
 .card-img{
     height: 170px;
@@ -76,6 +84,8 @@
 .btn-more{
     background-color: rgb(68, 163, 68);
     color:white;
+    width: 140px;
+    margin: 0 auto;
     transition: all .2s ease-in-out;
 }
 
