@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/home/header.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/home/navigation-block.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/home/news.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/home/idk.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home/gallery.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/home/contact.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/home/footer.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/home/about.css')}}">
@@ -105,11 +105,34 @@
     </section>
 
     <section id="gallery">
+        <div><h1 class="text-center">Галерея</h1></div>
         <div class="container">
-            <div class="swiper-gallery">
-
+            <div id="gallery-content">
+                <div id="gallery-posts">
+                    <div class="list-group">
+                        {%for i in range(20)%}
+                            <button type="button" class="list-group-item list-group-item-action">A second item</button>
+                        {%endfor%}
+                    </div>
+                </div>
+        
+                <div class="swiper-gallery">
+                    <div class="swiper-wrapper">
+                        {%for i in range(1,4)%}
+                        <div class="swiper-slide">
+                            <div class="gallery-block-img">
+                                <img src="{{url_for('static',filename='img/gallery/test/' + i|string + '.jpg')}}">
+                            </div>
+                        </div>
+                        {%endfor%}
+                    </div>
+                    
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
             </div>
         </div>
+
     </section>
 
     <section id="about">
@@ -197,8 +220,7 @@
     <!-- Swiper --><script src="{{url_for('static',filename='js/swiper/swiper-bundle.js')}}"></script>
 
     <!-- Мои скрипты -->
-    <script src="{{url_for('static',filename='js/about.js')}}"></script>
-    
-    <!-- <script src="{{url_for('static',filename='js/news.js')}}"></script> -->
+    <script src="{{url_for('static',filename='js/home/about.js')}}"></script>
+    <script src="{{url_for('static',filename='js/home/gallery.js')}}"></script>
 </body>
 </html>
