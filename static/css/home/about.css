@@ -2,7 +2,7 @@
     width: 100%;
     min-height: 700px;
     background-color: rgba(0, 0, 0, 0.465);
-    background-image: url("../img/bg-about.jpg");
+    background-image: url("../../img/bg-about.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -14,7 +14,7 @@
     text-align: center;
 }
 
-.swiper{
+.swiper-about{
     min-height: 400px;
     background-color: rgba(36, 36, 36, 0.397);
     backdrop-filter: blur(8px);

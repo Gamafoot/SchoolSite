@@ -3,7 +3,7 @@
         height: 910px;
         position: relative;
         background-color: rgba(0, 0, 0, 0.465);
-        background-image: url("../img/school.jpg");
+        background-image: url("../../img/school.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         margin: 0;
@@ -64,7 +64,7 @@
         height: 700px;
         position: relative;
         background-color: rgba(0, 0, 0, 0.465);
-        background-image: url("../img/school.jpg");
+        background-image: url("../../img/school.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         margin: 0;

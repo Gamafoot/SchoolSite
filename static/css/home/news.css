@@ -30,6 +30,17 @@
     text-shadow: 0px 0px 5px white;
 }
 
+.card-news{
+    margin: 0 auto;
+    width: 350px;
+    box-shadow: 2px 2px 10px rgba(24, 24, 24, 0.239);
+    background-color: rgba(26, 26, 26, 0.459);
+    transition: all .2s ease-in-out;
+}
+
+.card-news:hover{
+    box-shadow: 0 0 15px rgb(95, 95, 95);
+}
 
 .block-img{
     width: 330px;
@@ -44,18 +55,6 @@
     object-fit: cover;
 }
 
-.card-news{
-    margin: 0 auto;
-    width: 350px;
-    box-shadow: 2px 2px 10px rgba(24, 24, 24, 0.239);
-    background-color: rgba(26, 26, 26, 0.459);
-    transition: all .2s ease-in-out;
-}
-
-.card-news:hover{
-    box-shadow: 0 0 15px rgb(95, 95, 95);
-}
-
 .card-body{
     backdrop-filter: blur(8px);
     padding: 10px 20px 20px 20px;
@@ -64,6 +63,7 @@
 .card-title{
     transform: scale(1);
 }
+
 .card-title-hover{
     transition: all .5 ease-in-out;
     transform: scale(1.1);
@@ -80,12 +80,15 @@
     font-weight: 300px;
 }
 
+.block-btn{
+    width: 140px;
+    margin: 0 auto;
+}
 
 .btn-more{
     background-color: rgb(68, 163, 68);
     color:white;
-    width: 140px;
-    margin: 0 auto;
+    width: 100%;
     transition: all .2s ease-in-out;
 }
 

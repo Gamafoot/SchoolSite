@@ -25,11 +25,12 @@ def main():
     
     #----------------------------------------#
     data_teachers = execute('SELECT fio, discription, photo FROM teachers')
-    # print(data_teachers)
+    
     data = {
         'class': number,
         'data_t': data_teachers,
     }
+    
     for i in range(len(data_teachers)):
         print(data_teachers[i][2])
         

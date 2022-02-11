@@ -14,12 +14,13 @@
     
     <!-- Мои таблицы стилей -->
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/header.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/navigation-block.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/news.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/contact.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/about.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home/header.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home/navigation-block.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home/news.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home/idk.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home/contact.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home/footer.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home/about.css')}}">
     <link rel="shortcut icon" href="{{url_for('static', filename='img/school.png')}}">
     
     <!-- FONTS -->
@@ -46,7 +47,6 @@
     </header>
     
     <section id="navigation-block">
-        <div class="free-space"></div>
         
         <div class="container">
             <div id="header-navigation">
@@ -71,7 +71,9 @@
 
     <section id="news">
         <div class="container">
-            <h1 id="header-news">Новости школы</h1>
+            <div id="header-news">
+                <h1>Новости школы</h1>
+            </div>
             <div class="row">
                 {%for i in range(3)%}
                 <div class="col-lg-4">
@@ -86,7 +88,7 @@
                         <div class="card-body">
                             <h4 class="card-title text-center">Точка роста</h4>
                             <p class="card-text">Cпециальные образовательные центры, создаваемые на базе школ в селах и малых городах. Их открытие предусмотрено федеральным проектом ...</p>
-                            <a href="#" class="btn btn-more">Подробнее</a>
+                            <div class="block-btn"><a href="#" class="btn btn-more">Подробнее</a></div>
                         </div>
                     </div>
                 </div>
@@ -102,10 +104,18 @@
         </style>
     </section>
 
+    <section id="gallery">
+        <div class="container">
+            <div class="swiper-gallery">
+
+            </div>
+        </div>
+    </section>
+
     <section id="about">
         <div class="container">
             <h1 id="header-about">Информация о нас</h1>
-            <div class="swiper">
+            <div class="swiper-about">
                 <div class="swiper-wrapper">
                 {%for i in range(data['data_t']|length)%}
                     <div class="swiper-slide">
@@ -132,9 +142,8 @@
                     </div>
                 {%endfor%}
                 </div>
-
+                
                 <div class="swiper-pagination"></div>
-              
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
@@ -150,7 +159,7 @@
                         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adea9e19c826c544e6b93d3cde315d7ed301003fa94df820f24badd47ec20e552&amp;width=622&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
                     </div>
                 </div>
-                <div class="col-5 offset-">
+                <div class="col-5">
                     <div style="margin-left: 20px;">
                     <h2>Контактная информация:</h2>
                     <div class="line1"></div>
@@ -170,6 +179,7 @@
                     </div>
                 </div>
             </div>
+            <div class="free-space"></div>
         </div>
     </section>
     
@@ -187,8 +197,8 @@
     <!-- Swiper --><script src="{{url_for('static',filename='js/swiper/swiper-bundle.js')}}"></script>
 
     <!-- Мои скрипты -->
-    <script src="{{url_for('static',filename='js/slider.js')}}"></script>
     <script src="{{url_for('static',filename='js/about.js')}}"></script>
+    
     <!-- <script src="{{url_for('static',filename='js/news.js')}}"></script> -->
 </body>
 </html>
