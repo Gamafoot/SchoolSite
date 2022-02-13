@@ -17,7 +17,7 @@
 .swiper-about{
     min-height: 400px;
     background-color: rgba(36, 36, 36, 0.397);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(3px);
     border-radius: 5px;
     overflow: hidden;
 }
