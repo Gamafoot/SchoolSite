@@ -23,11 +23,6 @@
     display: block;
     width: 380px;
     margin: 0 auto;
-    transition: all 0.2s ease-in-out;
-}
-
-#header-news h1:hover{
-    text-shadow: 0px 0px 5px white;
 }
 
 .card-news{
