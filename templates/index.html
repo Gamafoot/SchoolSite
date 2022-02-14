@@ -108,7 +108,27 @@
     <section id="gallery">
         <div><h1 class="text-center header-anim">Галерея</h1></div>
         <div class="container">
-            
+            <div class="panel">
+                <div class="posts">
+                    {%for i in range(1,13)%}
+                    <div class="post{{i}}">
+                        <h4 style="text-align: center;line-height: 230px;">Тема поста {{i}}</h4>
+                        <style>
+                            .post{{i}}{
+                                background-image: url("{{url_for('static',filename='img/gallery/test/'+i|string+'.jpg')}}");
+                                width: 321px;
+                                height: 230px;
+                                background-color: rgba(0, 0, 0, 0.52);
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                background-blend-mode: multiply;
+                                transition: all .2s ease-in-out;
+                            }
+                        </style>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
         </div>
 
     </section>
@@ -198,7 +218,7 @@
     <!-- Swiper --><script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- Мои скрипты -->
-    <!-- <script src="{{url_for('static',filename='js/home/gallery.js')}}"></script> -->
+    <script src="{{url_for('static',filename='js/home/gallery.js')}}"></script>
     <script src="{{url_for('static',filename='js/home/about.js')}}"></script>
 </body>
 </html>
