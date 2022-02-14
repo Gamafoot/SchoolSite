@@ -37,6 +37,12 @@
     margin: 50px auto;
 }
 
+.photo-teacher:hover .overlay{
+    background-color: rgba(0, 0, 0, 0.575);
+    backdrop-filter: blur(3px);
+}.photo-teacher:hover .discribe{
+    opacity: 1;
+}
 
 .overlay{
     width: inherit;
@@ -45,34 +51,21 @@
     border-radius: 10px;
 }
 
-.overlay-hover{
-    background-color: rgba(0, 0, 0, 0.575);
-    backdrop-filter: blur(3px);
-}
-
-
 .discribe{
     width: inherit;
     padding-top: 20px;
     opacity: 0;
     position: relative;
     top:0;
-}
-
-.discribe-hover{
     transition: all .3s ease-in-out;
-    opacity: 1;
 }
-
 .discribe h5, p{text-align: center;}
-
 .discribe p{
     width: 250px;
     margin: 0 auto;
     font-size: 0.9rem;
     margin-bottom: 0;
 }
-
 .discribe a{
     text-align: center;
     display: block;
