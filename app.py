@@ -1,40 +1,39 @@
-from flask import Flask, render_template, request
-import sqlite3
+from operator import index
+from flask import Flask, render_template
+from DataBase import DataBase
+import os
 
 app = Flask(__name__)
 app.config.from_object(__name__)
 
-def execute(sql, all = True):
-    conn = sqlite3.connect('db.sqlite3', check_same_thread=False)
-    cur = conn.cursor()
-    cur.execute('SELECT fio, text, photo FROM teachers')
-
-    if all == True:
-        data = cur.fetchall()
-    else:
-        data = cur.fetchone()
-
-    conn.close()
-    return data
+db = DataBase()
 
 @app.route('/', methods=['POST', 'GET'])
 def main():
-    number = '1'
-    if request.method == 'POST':
-        number = request.form['comp_select']
+    data_teachers = db.getData('SELECT fio, text, photo FROM teachers', 'all')
     
-    #----------------------------------------#
-    data_teachers = execute('SELECT fio, discription, photo FROM teachers')
+    #Filling massiv
+    gallery = []
+    path = os.path.dirname(__file__) + '\static\img\gallery'
+    index = 0
+    for folder_name in os.listdir(path):
+        for post_name in os.listdir(path+'\\'+folder_name):
+            gallery.append({
+                'title':post_name,
+                'date':folder_name,
+                'photos':[]
+            })
+            for file_name in os.listdir(path+'\\'+folder_name+'\\'+post_name):
+                gallery[index]['photos'].append(folder_name+'/'+post_name+'/'+file_name)
+            index += 1
+    #Sort
+    for main_el in range(len(gallery)):
+        for other_el in range(len(gallery)):
+            print(gallery[other_el]['date'],'>',gallery[main_el]['date'],'=', gallery[other_el]['date'] > gallery[main_el]['date'])
+            if gallery[other_el]['date'] > gallery[main_el]['date']:
+                gallery[other_el]['date'],gallery[main_el]['date'] = gallery[main_el]['date'], gallery[other_el]['date']
     
-    data = {
-        'class': number,
-        'data_t': data_teachers,
-    }
-    
-    for i in range(len(data_teachers)):
-        print(data_teachers[i][2])
-        
-    return render_template('index.html', data = data)
+    return render_template('index.html', data_teachers = data_teachers, data_gallery = gallery)
 
 @app.route('/news')
 def news():
