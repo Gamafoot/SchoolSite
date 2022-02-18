@@ -29,7 +29,6 @@ def main():
     #Sort
     for main_el in range(len(gallery)):
         for other_el in range(len(gallery)):
-            print(gallery[other_el]['date'],'>',gallery[main_el]['date'],'=', gallery[other_el]['date'] > gallery[main_el]['date'])
             if gallery[other_el]['date'] > gallery[main_el]['date']:
                 gallery[other_el]['date'],gallery[main_el]['date'] = gallery[main_el]['date'], gallery[other_el]['date']
     

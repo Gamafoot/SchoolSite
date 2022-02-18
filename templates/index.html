@@ -45,7 +45,7 @@
 </head>
 
 <body>
-    {%include "navbar.html"%}
+    {% include "navbar.html" %}
 
     <header>
         <div class="container">
@@ -142,21 +142,47 @@
                     {%endfor%}
                 </div> -->
                 
+                {#{% for i in range(1)%}
                 <div id="gallery-slider">
-                    <div class="row">
-                        <div class="col-2">
-
+                    <div class="colum1">
+                        <input type="button" class="prev" value="<">
+                        {% for el in range(data_gallery[i]['photos']|length - 1)%}
+                            <div class="img-slider">
+                                <img src="{{url_for('static', filename='img/gallery/'+data_gallery[i]['photos'][el])}}" draggable="false">
+                            </div>
+                        {% endfor %}
+                        <input type="button" class="next" value=">">
+                    </div>
+                    <div class="colum2">
+                        {% for el in range(data_gallery[i]['photos']|length - 1)%}
+                            <img src="{{url_for('static', filename='img/gallery/'+data_gallery[i]['photos'][el])}}" draggable="false">
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}#}
+                
+                <div class="gallery-swiper">
+                    <div class="swiper-wrapper">
+                        {% for i in range(data_gallery[0]['photos']|length - 1)%}
+                        <div class="swiper-slide">
+                            <img src="{{url_for('static', filename='img/gallery/'+data_gallery[0]['photos'][i])}}" draggable="false" onselectstart="return false">
                         </div>
-                        <div class="col-10">
-                            <div class="main-img">
-                                <img src="{{url_for('ststic', filename='img/gallery/'+data_gallery[0]['photos'][0])}}">
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <div class="small-swiper">
+                        <div class="swiper-wrapper">
+                            {% for i in range(data_gallery[0]['photos']|length - 1)%}
+                            <div class="swiper-slide">
+                                <img src="{{url_for('static', filename='img/gallery/'+data_gallery[0]['photos'][i])}}" draggable="false" onselectstart="return false">
                             </div>
-                            <div class="small-img">
-                                
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 

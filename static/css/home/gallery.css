@@ -65,3 +65,48 @@
     transform: scale(1.05);
 }
 
+.gallery-swiper{
+    width: 100%;
+    height: 70%;
+    position: relative;
+}
+
+.gallery-swiper .swiper-slide{
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-swiper img{
+    max-width: 1300px;
+    max-height: 700px;
+}
+
+.gallery-swiper img:hover{
+    cursor: grab;
+}
+
+.gallery-swiper .swiper-button-prev::after{
+    padding-left: 450px;
+}
+
+.gallery-swiper .swiper-button-next::after{
+    padding-right: 450px;
+}
+
+/* Миниатуры */
+.small-swiper{
+    margin-top: 10px;
+}
+.small-swiper .slide{
+    opacity: 0.2;
+    transition: opacity 0.3s ease 0s;
+}
+
+.small-swiper .swiper-slide-thumb-active{
+    opacity: 1;
+}
+
+.small-swiper img{
+    max-width: 250px;
+    max-height: 160px;
+}
