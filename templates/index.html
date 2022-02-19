@@ -37,6 +37,7 @@
 
     <!-- Own scripts -->
     <script defer src="{{url_for('static',filename='js/home/gallery.js')}}"></script>
+    <script defer src="{{url_for('static',filename='js/home/swiper-gallery.js')}}"></script>
     <script defer src="{{url_for('static',filename='js/home/swiper-about.js')}}"></script>
 
     
@@ -122,9 +123,10 @@
         </div>
         <div class="container">
             <div class="panel">
-                <!-- <div id="posts">
+                <input id="back" style="display: none;" type="button" value="<" onclick="BackToPanel()">
+                <div id="posts">
                     {% for i in range(data_gallery|length) %}
-                    <div id="background-post{{i}}" class="post">
+                    <div id="background-post{{i}}" class="post" onclick="OpenPost({{i}})">
                         {% if data_gallery[i]['title']|length > 35%}
                             <h4 onmousedown="return flase" onselectstart="return false">{{data_gallery[i]['title'][:35]}}...</h4>
                         {% else %}
@@ -135,57 +137,32 @@
                         <style>
                             #background-post{{i}}{
                                     background-image: url("{{url_for('static',filename='img/gallery/'+data_gallery[i]['photos'][0])}}");
-                                }                            
-                            </style>
+                                }
+                        </style>
                         {% endif %}
                     </div>
                     {%endfor%}
-                </div> -->
-                
-                {#{% for i in range(1)%}
-                <div id="gallery-slider">
-                    <div class="colum1">
-                        <input type="button" class="prev" value="<">
-                        {% for el in range(data_gallery[i]['photos']|length - 1)%}
-                            <div class="img-slider">
-                                <img src="{{url_for('static', filename='img/gallery/'+data_gallery[i]['photos'][el])}}" draggable="false">
-                            </div>
-                        {% endfor %}
-                        <input type="button" class="next" value=">">
-                    </div>
-                    <div class="colum2">
-                        {% for el in range(data_gallery[i]['photos']|length - 1)%}
-                            <img src="{{url_for('static', filename='img/gallery/'+data_gallery[i]['photos'][el])}}" draggable="false">
-                        {% endfor %}
-                    </div>
                 </div>
-                {% endfor %}#}
-                
-                <div class="gallery-swiper">
-                    <div class="swiper-wrapper">
-                        {% for i in range(data_gallery[0]['photos']|length - 1)%}
-                        <div class="swiper-slide">
-                            <img src="{{url_for('static', filename='img/gallery/'+data_gallery[0]['photos'][i])}}" draggable="false" onselectstart="return false">
-                        </div>
-                        {% endfor %}
-                    </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <div class="small-swiper">
-                        <div class="swiper-wrapper">
-                            {% for i in range(data_gallery[0]['photos']|length - 1)%}
-                            <div class="swiper-slide">
-                                <img src="{{url_for('static', filename='img/gallery/'+data_gallery[0]['photos'][i])}}" draggable="false" onselectstart="return false">
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
-
+        <div id="gallery-slides">
+            <input type="button" id="back" onclicck="alert('click')" value="✖">
+            <div class="slider">
+                <div class="slider-wrapper">
+                    <input type="button" onclick="SlidePrev()" value="❮">
+                    <div id="main-slide">
+                        <img src="{{url_for('static', filename='img/gallery/'+data_gallery[0]['photos'][0])}}">
+                    </div>
+                    <input type="button" onclick="SlideNext()" value="❯">
+                </div>
+                <div class="slider-small">
+                    {% for i in range(data_gallery[0]['photos']|length) %}
+                    <img onclick="SelectSlider({{i}});" src="{{url_for('static', filename='img/gallery/'+data_gallery[0]['photos'][i])}}">
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="gallery-overlay" style="display: block;"></div>
     </section>
 
     <section id="about">
