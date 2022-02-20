@@ -36,9 +36,9 @@
     <!-- Swiper --><script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- Own scripts -->
-    <script defer src="{{url_for('static',filename='js/home/gallery.js')}}"></script>
-    <script defer src="{{url_for('static',filename='js/home/swiper-gallery.js')}}"></script>
-    <script defer src="{{url_for('static',filename='js/home/swiper-about.js')}}"></script>
+    <script defer src="{{url_for('static',filename='js//gallery.js')}}"></script>
+    <script defer src="{{url_for('static',filename='js//swiper-gallery.js')}}"></script>
+    <script defer src="{{url_for('static',filename='js//swiper-about.js')}}"></script>
 
     
     <title>МБОУ СОШ №9</title>
@@ -60,22 +60,68 @@
     </header>
     
     <section id="navigation-block">
-        
         <div class="container">
             <div id="header-navigation">
                 <h1 class="header-anim">Навигационный блок</h1>
             </div>
             <div class="indent-header"></div>
             <div class="row">
-                {%for i in range(8)%}
                 <div class="col-3">
-                    <div class="own-circle">
+                    <div class="own-circle" onclick="document.location='/news'">
+                        <img src="{{url_for('static', filename='img/icons/news.png')}}" draggable="false">
+                    </div>
+                    <h3 style="text-align: center;">Новости</h3>
+                    <p style="text-align: center;">все новости школы</p>
+                </div>
+                <div class="col-3">
+                    <div class="own-circle" onclick="document.location='/schedule'">
+                        <img src="{{url_for('static', filename='img/icons/schedule.png')}}" draggable="false">
+                    </div>
+                    <h3 style="text-align: center;">Рассписание</h3>
+                    <p style="text-align: center;">рассписание уроков всех классов</p>
+                </div>
+                <div class="col-3">
+                    <div class="own-circle" onclick="document.location='/achivments'">
+                        <img src="{{url_for('static', filename='img/icons/achiv.png')}}" draggable="false">
+                    </div>
+                    <h3 style="text-align: center;">Достижения</h3>
+                    <p style="text-align: center;">все достижения школы</p>
+                </div>
+                <div class="col-3">
+                    <div class="own-circle" onclick="document.location='/pupils'">
                         <img src="{{url_for('static', filename='img/icons/group.png')}}" draggable="false">
                     </div>
                     <h3 style="text-align: center;">Доска почёта</h3>
                     <p style="text-align: center;">ученики которые учатся</p>
                 </div>
-                {%endfor%}
+                <div class="col-3">
+                    <div class="own-circle" onclick="document.location='#about'">
+                        <img src="{{url_for('static', filename='img/icons/teacher.png')}}" draggable="false">
+                    </div>
+                    <h3 style="text-align: center;">О нас</h3>
+                    <p style="text-align: center;">учителя и преподаватели</p>
+                </div>
+                <div class="col-3">
+                    <div class="own-circle" onclick="document.location='#contact'">
+                        <img src="{{url_for('static', filename='img/icons/about.png')}}" draggable="false">
+                    </div>
+                    <h3 style="text-align: center;">Контакты</h3>
+                    <p style="text-align: center;">связь с нами</p>
+                </div>
+                <div class="col-3">
+                    <div class="own-circle">
+                        <img src="{{url_for('static', filename='img/icons/exam.png')}}" draggable="false">
+                    </div>
+                    <h3 style="text-align: center;">ОГЭ и ЕГЭ</h3>
+                    <p style="text-align: center;">предстоящие экзамены</p>
+                </div>
+                <div class="col-3">
+                    <div class="own-circle">
+                        <img src="{{url_for('static', filename='img/icons/document.png')}}" draggable="false">
+                    </div>
+                    <h3 style="text-align: center;">Документы</h3>
+                    <p style="text-align: center;">документы...</p>
+                </div>
             </div>
         </div>
         
@@ -123,14 +169,13 @@
         </div>
         <div class="container">
             <div class="panel">
-                <input id="back" style="display: none;" type="button" value="<" onclick="BackToPanel()">
                 <div id="posts">
                     {% for i in range(data_gallery|length) %}
-                    <div id="background-post{{i}}" class="post" onclick="OpenPost({{i}})">
+                    <div id="background-post{{i}}" class="post" onclick="IncludeSlider({{i}})">
                         {% if data_gallery[i]['title']|length > 35%}
-                            <h4 onmousedown="return flase" onselectstart="return false">{{data_gallery[i]['title'][:35]}}...</h4>
+                            <h4 onmousedown="return false" onselect="return false">{{data_gallery[i]['title'][:35]}}...</h4>
                         {% else %}
-                            <h4 onmousedown="return flase" onselectstart="return false">{{data_gallery[i]['title']}}</h4>
+                            <h4 onmousedown="return false" onselect="return false">{{data_gallery[i]['title']}}</h4>
                         {% endif %}
 
                         {% if data_gallery[i]['photos']|length > 0 %}
@@ -145,24 +190,26 @@
                 </div>
             </div>
         </div>
-        <div id="gallery-slides">
-            <input type="button" id="back" onclicck="alert('click')" value="✖">
-            <div class="slider">
-                <div class="slider-wrapper">
-                    <input type="button" onclick="SlidePrev()" value="❮">
-                    <div id="main-slide">
-                        <img src="{{url_for('static', filename='img/gallery/'+data_gallery[0]['photos'][0])}}">
+        <div id="gallery-slides" style="display: none;">
+            <input type="button" id="back" onclick="Back();" value="✖">
+                <div class="slider">
+                    <div class="slider-wrapper">
+                        <input type="button" onclick="PrevSlide()" value="❮">
+                        <div id="main-slide">
+                            <img src="">
+                        </div>
+                        <input type="button" onclick="NextSlide()" value="❯">
                     </div>
-                    <input type="button" onclick="SlideNext()" value="❯">
-                </div>
-                <div class="slider-small">
-                    {% for i in range(data_gallery[0]['photos']|length) %}
-                    <img onclick="SelectSlider({{i}});" src="{{url_for('static', filename='img/gallery/'+data_gallery[0]['photos'][i])}}">
+                    {% for el in range(data_gallery|length) %}
+                    <div class="slider-small" style="display: none;">
+                        {% for i in range(data_gallery[el]['photos']|length) %}
+                            <img onclick="SelectSlider(this, {{i}})" src="{{url_for('static', filename='img/gallery/'+data_gallery[el]['photos'][i])}}" draggable="false">
+                        {% endfor %}
+                    </div>
                     {% endfor %}
                 </div>
-            </div>
         </div>
-        <div class="gallery-overlay" style="display: block;"></div>
+        <div class="gallery-overlay" style="display: none;"></div>
     </section>
 
     <section id="about">

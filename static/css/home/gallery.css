@@ -126,6 +126,10 @@
     text-shadow: 0 0 8px white;
 }
 
+#gallery-slides .slider .slider-wrapper input:active{
+    transform: scale(0.9);
+}
+
 /* Миниатуры */
 
 #gallery-slides .slider .slider-small{
@@ -153,7 +157,6 @@
     opacity: 1;
 }
 
-
 #gallery-slides #back{
     background: none;
     border: 5px solid white;
@@ -164,11 +167,11 @@
     height: 70px;
     position: absolute;
     top: 20px;
-    left: 20px;
-    transition: all .2s ease-in-out;
+    right: 20px;
+    transition: all .1s ease-in-out;
 }
 
 #gallery-slides #back:hover{
     box-shadow: 0 0 8px white;
-    text-shadow: 0 0 8px white;
+    /* text-shadow: 0 0 8px white; */
 }
