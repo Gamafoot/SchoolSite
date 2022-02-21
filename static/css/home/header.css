@@ -1,4 +1,4 @@
-@media screen and (max-width: 1920px) {
+@media screen and (min-width: 1824px) {
     header{
         height: 910px;
         position: relative;
@@ -59,9 +59,10 @@
     }
 }
 
-@media screen and (max-width: 1280px) {
+@media only screen and (min-width: 1224px) {
     header{
-        height: 700px;
+        height: 600px;
+        width: 100%;
         position: relative;
         background-color: rgba(0, 0, 0, 0.465);
         background-image: url("../../img/school.jpg");
@@ -70,40 +71,49 @@
         margin: 0;
         background-attachment: fixed;
         background-blend-mode: multiply;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #header-about{
+        font-size: 45px;
     }
 
     .header-content{
         height: 354px;
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
         color: white;
         opacity: .9;
         z-index: 1;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .header-content h1{
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 700;
         margin: 0;
     }
 
     .header-content h2{
-        font-size: 30px;
+        font-size: 40px;
         color:rgb(68, 163, 68);
     }
     
     .header-content h4{
-        width: 700px;
+        width: 900px;
         margin: 0 auto;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 400;
         margin-bottom: 35px;
         opacity: .9;
+        text-align: center;
     }
 
     .btn-main{
+        width: 200px;
+        height: 50px;
         border: none;
         margin-top: 20px;
         border-radius: 5px;

@@ -1,80 +1,182 @@
-#about{
-    width: 100%;
-    min-height: 700px;
-    background-color: rgba(0, 0, 0, 0.465);
-    background-image: url("../../img/bg-about.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-blend-mode: multiply;
+@media only screen and (min-width: 1824px) {
+    #about{
+        width: 100%;
+        min-height: 700px;
+        background-color: rgba(0, 0, 0, 0.465);
+        background-image: url("../../img/bg-about.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+    }
+
+    #header-about{
+        padding:40px 0;
+        text-align: center;
+    }
+
+    .swiper-about{
+        min-height: 400px;
+        background-color: rgba(36, 36, 36, 0.397);
+        backdrop-filter: blur(3px);
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .swiper-button-prev, .swiper-button-next::after{
+        color: white;
+    }
+
+    .card-body-teacher{
+        width: 300px;
+        height: 500px;
+    }
+
+    .photo-teacher{
+        width: 300px;
+        height: 400px;
+        margin: 50px auto;
+    }
+
+    .photo-teacher:hover .overlay{
+        background-color: rgba(0, 0, 0, 0.575);
+        backdrop-filter: blur(3px);
+    }.photo-teacher:hover .discribe{
+        opacity: 1;
+    }
+
+    .overlay{
+        width: inherit;
+        height: inherit;
+        transition: all .2s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .discribe{
+        width: inherit;
+        padding-top: 20px;
+        opacity: 0;
+        position: relative;
+        top:0;
+        transition: all .3s ease-in-out;
+    }
+    .discribe h5, p{text-align: center;}
+    .discribe p{
+        width: 250px;
+        margin: 0 auto;
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+    .discribe a{
+        text-align: center;
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .active-bullet{
+        transform: scale(1.3);
+        background-color: white;
+        opacity: 1;
+    }
 }
 
-#header-about{
-    padding:40px 0;
-    text-align: center;
-}
+@media only screen and (min-width: 1224px) {
+    #about{
+        width: 100%;
+        min-height: 700px;
+        background-color: rgba(0, 0, 0, 0.465);
+        background-image: url("../../img/bg-about.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+    }
 
-.swiper-about{
-    min-height: 400px;
-    background-color: rgba(36, 36, 36, 0.397);
-    backdrop-filter: blur(3px);
-    border-radius: 5px;
-    overflow: hidden;
-}
+    #about .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.swiper-button-prev, .swiper-button-next::after{
-    color: white;
-}
+    #header-about{
+        padding:40px 0;
+        text-align: center;
+    }
 
-.card-body-teacher{
-    width: 300px;
-    height: 500px;
-}
+    .swiper-about{
+        min-height: 400px;
+        width: 1000px;
+        background-color: rgba(36, 36, 36, 0.397);
+        backdrop-filter: blur(3px);
+        border-radius: 5px;
+        overflow: hidden;
+    }
 
-.photo-teacher{
-    width: 300px;
-    height: 400px;
-    margin: 50px auto;
-}
+    .swiper-button-prev, .swiper-button-next::after{
+        color: white;
+    }
 
-.photo-teacher:hover .overlay{
-    background-color: rgba(0, 0, 0, 0.575);
-    backdrop-filter: blur(3px);
-}.photo-teacher:hover .discribe{
-    opacity: 1;
-}
+    .card-body-teacher{
+        width: 300px;
+        height: 500px;
+    }
 
-.overlay{
-    width: inherit;
-    height: inherit;
-    transition: all .2s ease-in-out;
-    border-radius: 10px;
-}
+    .photo-teacher{
+        width: 250px;
+        height: 350px;
+        margin: 50px auto;
+    }
 
-.discribe{
-    width: inherit;
-    padding-top: 20px;
-    opacity: 0;
-    position: relative;
-    top:0;
-    transition: all .3s ease-in-out;
-}
-.discribe h5, p{text-align: center;}
-.discribe p{
-    width: 250px;
-    margin: 0 auto;
-    font-size: 0.9rem;
-    margin-bottom: 0;
-}
-.discribe a{
-    text-align: center;
-    display: block;
-    width: 200px;
-    margin: 0 auto;
-}
+    .photo-teacher:hover .overlay{
+        background-color: rgba(0, 0, 0, 0.575);
+        backdrop-filter: blur(3px);
+    }.photo-teacher:hover .discribe{
+        opacity: 1;
+    }
 
-.active-bullet{
-    transform: scale(1.3);
-    background-color: white;
-    opacity: 1;
+    .overlay{
+        width: inherit;
+        height: inherit;
+        transition: all .2s ease-in-out;
+        border-radius: 10px;
+    }
+
+
+
+    .discribe{
+        width: inherit;
+        padding-top: 20px;
+        opacity: 0;
+        position: relative;
+        top:0;
+        transition: all .3s ease-in-out;
+    }
+
+    .discribe h5{
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .discribe p{
+        width: 250px;
+        margin: 0 auto;
+        font-size: 17px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .discribe a{
+        text-align: center;
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .active-bullet{
+        transform: scale(1.3);
+        background-color: white;
+        opacity: 1;
+    }
 }
