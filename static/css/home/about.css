@@ -93,6 +93,10 @@
         background-blend-mode: multiply;
     }
 
+    #header-about{
+        font-size: 45px;
+    }
+
     #about .container{
         display: flex;
         justify-content: center;

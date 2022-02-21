@@ -28,4 +28,10 @@
 
 #social img{
     width: 50px;
+    border-radius: 50%;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+#social img:hover{
+    box-shadow: 0 0 5px white;
 }
