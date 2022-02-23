@@ -28,6 +28,10 @@ h1,h2,h3,h4,h5,p{
 }
 
 ::-webkit-scrollbar-thumb{
+<<<<<<< HEAD
+=======
+    border-radius: 10px;
+>>>>>>> parent of 99941a8 (Adaptability)
     background-color: white;
     border: 3px solid var(--dark);
 }
@@ -58,6 +62,6 @@ h1,h2,h3,h4,h5,p{
 }
 
 .header-anim:hover{
-    text-shadow: 0px 0px 2px white;
+    text-shadow: 0px 0px 5px white;
     cursor: pointer;
 }

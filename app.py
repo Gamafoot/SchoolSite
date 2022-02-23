@@ -1,3 +1,4 @@
+from operator import index
 from flask import Flask, render_template
 from DataBase import DataBase
 import os
@@ -13,16 +14,16 @@ def main():
     
     #Gallery
     gallery = []
-    path = os.path.dirname(__file__) + '/static/img/gallery'
+    path = os.path.dirname(__file__) + '\static\img\gallery'
     index = 0
     for folder_name in os.listdir(path):
-        for post_name in os.listdir(path+'/'+folder_name):
+        for post_name in os.listdir(path+'\\'+folder_name):
             gallery.append({
                 'title':post_name,
                 'date':folder_name,
                 'photos':[]
             })
-            for file_name in os.listdir(path+'/'+folder_name+'/'+post_name):
+            for file_name in os.listdir(path+'\\'+folder_name+'\\'+post_name):
                 gallery[index]['photos'].append(folder_name+'/'+post_name+'/'+file_name)
             index += 1
     #Sort
