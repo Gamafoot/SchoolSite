@@ -52,13 +52,15 @@ h1,h2,h3,h4,h5,p{
 }
 
 @media screen and (max-width: 1920px) {
-    /* Header */
+    /* ------------------------------------- */
+    /*                Header                 */
+    /* ------------------------------------- */
     header{
         height: 910px;
         width: 100%;
         position: relative;
         background-color: rgba(0, 0, 0, 0.465);
-        background-image: url("../img/school.jpg");
+        background-image: url("../img/home/school.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         margin: 0;
@@ -117,7 +119,9 @@ h1,h2,h3,h4,h5,p{
     }
 
 
-    /* navigation */
+    /* ------------------------------------- */
+    /*              Navigation               */
+    /* ------------------------------------- */
     #navigation-block{
         background-color: var(--green);
         width: 100%;
@@ -174,7 +178,9 @@ h1,h2,h3,h4,h5,p{
         font-size: 0.95rem;
     }
 
-    /* news */
+    /* ------------------------------------- */
+    /*                 News                  */
+    /* ------------------------------------- */
     #news{
         min-height: 620px;
         background-color: rgba(0, 0, 0, 0.465);
@@ -270,7 +276,9 @@ h1,h2,h3,h4,h5,p{
         color:white;
     }
 
-    /* gallery */
+    /* ------------------------------------- */
+    /*                Gallery                */
+    /* ------------------------------------- */
     #gallery{
         width: 100%;
         height: 900px;
@@ -449,12 +457,14 @@ h1,h2,h3,h4,h5,p{
     }
 
 
-    /* about */
+    /* ------------------------------------- */
+    /*                 About                 */
+    /* ------------------------------------- */
     #about{
         width: 100%;
         min-height: 700px;
         background-color: rgba(0, 0, 0, 0.465);
-        background-image: url("../img/bg-about.jpg");
+        background-image: url("../img/home/bg-about.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -532,7 +542,9 @@ h1,h2,h3,h4,h5,p{
     }
 
 
-    /* contact */
+    /* ------------------------------------- */
+    /*                Contact                */
+    /* ------------------------------------- */
     #contact{
         width: 100%;
         min-height: 600px;
@@ -545,7 +557,7 @@ h1,h2,h3,h4,h5,p{
         color: white;
     }
 
-    #map{
+    #block-map{
         width: 400;
         margin: auto 0;
         border: 10px solid rgb(47, 47, 47);
@@ -553,7 +565,11 @@ h1,h2,h3,h4,h5,p{
         overflow: hidden;
     }
 
-    .line1{
+    #map{
+        width: 10px;
+    }
+
+    .line{
         background-color: rgb(218, 218, 218);
         width: 100%;
         height: 6px;
@@ -571,12 +587,13 @@ h1,h2,h3,h4,h5,p{
         box-shadow: 0 0 5px white;
     }
 
-    /* footer */
-
+    /* ------------------------------------- */
+    /*                Footer                 */
+    /* ------------------------------------- */
     footer{
         height: 100px;
         width: 100%;
-        background-image: url('../img/footer.jpg');
+        background-image: url('../img/home/footer.jpg');
         background-size: 300px;
     }
 
@@ -607,6 +624,7 @@ h1,h2,h3,h4,h5,p{
     .footer-content p{
         margin: 0;
     }
+
 }
 
 @media screen and (max-width: 1280px) {
@@ -618,7 +636,7 @@ h1,h2,h3,h4,h5,p{
         width: 100%;
         position: relative;
         background-color: rgba(0, 0, 0, 0.465);
-        background-image: url("../img/school.jpg");
+        background-image: url("../img/home/school.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         margin: 0;
@@ -1027,7 +1045,7 @@ h1,h2,h3,h4,h5,p{
         width: 100%;
         min-height: 700px;
         background-color: rgba(0, 0, 0, 0.465);
-        background-image: url("../img/bg-about.jpg");
+        background-image: url("../img/home/bg-about.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -1088,8 +1106,6 @@ h1,h2,h3,h4,h5,p{
         border-radius: 10px;
     }
 
-
-
     .discribe{
         width: inherit;
         padding-top: 20px;
@@ -1125,7 +1141,9 @@ h1,h2,h3,h4,h5,p{
         opacity: 1;
     }
 
-    /* Contact */
+    /* ------------------------------------- */
+    /*               Contact                 */
+    /* ------------------------------------- */
     #contact{
         width: 100%;
         min-height: 600px;
@@ -1138,7 +1156,7 @@ h1,h2,h3,h4,h5,p{
         color: white;
     }
     
-    #map{
+    #block-map{
         width: 400;
         margin: auto 0;
         border: 10px solid rgb(47, 47, 47);
@@ -1146,7 +1164,7 @@ h1,h2,h3,h4,h5,p{
         overflow: hidden;
     }
     
-    .line1{
+    .line{
         background-color: rgb(218, 218, 218);
         width: 100%;
         height: 6px;
@@ -1170,7 +1188,7 @@ h1,h2,h3,h4,h5,p{
     footer{
         height: 100px;
         width: 100%;
-        background-image: url('../img/footer.jpg');
+        background-image: url('../img/home/footer.jpg');
         background-size: 300px;
     }
     
