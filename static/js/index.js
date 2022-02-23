@@ -1,5 +1,31 @@
 //=====================
-//   Gallery Swiper
+//      Gallery
+//=====================
+let posts = $('#posts');
+let btn_back = $('#back');
+let gallery_swiper = $('.gallery-swiper');
+
+function OpenPost(index){
+    posts.css('display', 'none')
+    btn_back.css('display','')
+    gallery_swiper.eq(index).css('display', '')
+    for(let i = 0; i < gallery_swiper.length; i++){
+        if(i != index){
+            gallery_swiper.eq(i).css('display', 'none');
+        }
+    }
+}
+function BackToPanel(){
+    posts.css('display', '')
+    btn_back.css('display','none')
+    for(let i = 0; i < gallery_swiper.length; i++){
+        gallery_swiper.eq(i).css('display', 'none');
+    }
+}
+
+
+//=====================
+//   Gallery Slider
 //=====================
 let gallery_sliders = $('#gallery-slides')
 let gallery_overlay = $('.gallery-overlay')
@@ -52,3 +78,24 @@ function Check(){
     }
 }
 //Нихуя не понимаю(
+
+
+//=====================
+//   About Swiper
+//=====================
+const swiper_about = new Swiper('.swiper-about', {
+    slidesPerView: 3,
+    
+    loop: true,
+    
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      bulletActiveClass: 'active-bullet',
+    },
+    
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});

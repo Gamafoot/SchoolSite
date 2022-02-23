@@ -1,21 +1,9 @@
+/* ------------------------------------- */
+/*               Default                 */
+/* ------------------------------------- */
 :root{
     --green: rgb(68, 163, 68);
-    /* --green: #43822D; */
     --dark: rgb(27, 27, 27);
-}
-
-::-webkit-scrollbar{
-    width: 15px;
-}
-
-::-webkit-scrollbar-track{
-    background: var(--dark);
-}
-
-::-webkit-scrollbar-thumb{
-    /* border-radius: 10px; */
-    background-color: white;
-    border: 3px solid var(--dark);
 }
 
 body{
@@ -28,6 +16,26 @@ h1,h2,h3,h4,h5,p{
     color: white;
 }
 
+/* ------------------------------------- */
+/*               Scrollbar               */
+/* ------------------------------------- */
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border: 3px solid var(--dark);
+}
+
+
+/* ------------------------------------- */
+/*               My class                */
+/* ------------------------------------- */
 .free-space{
     width: 100%;
     height: 70px;
@@ -36,6 +44,7 @@ h1,h2,h3,h4,h5,p{
 .indent-header{margin-bottom: 50px;}
 
 .text-white{color: #fff;}
+
 .text-center{text-align: center;}
 
 .transition-block{

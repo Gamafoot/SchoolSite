@@ -1,3 +1,6 @@
+//=====================
+//      Gallery
+//=====================
 let posts = $('#posts');
 let btn_back = $('#back');
 let gallery_swiper = $('.gallery-swiper');
@@ -12,7 +15,6 @@ function OpenPost(index){
         }
     }
 }
-
 function BackToPanel(){
     posts.css('display', '')
     btn_back.css('display','none')

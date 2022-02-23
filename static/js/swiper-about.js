@@ -1,4 +1,7 @@
-new Swiper('.swiper-about', {
+//=====================
+//   About Swiper
+//=====================
+const swiper_about = new Swiper('.swiper-about', {
     slidesPerView: 3,
     
     loop: true,

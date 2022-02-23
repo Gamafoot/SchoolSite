@@ -11,7 +11,7 @@ db = DataBase()
 def main():
     data_teachers = db.getData('SELECT fio, text, photo FROM teachers', 'all')
     
-    #Filling massiv
+    #Gallery
     gallery = []
     path = os.path.dirname(__file__) + '/static/img/gallery'
     index = 0
@@ -45,4 +45,4 @@ def detail(num):
 def test():
     return render_template('test.html')
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
