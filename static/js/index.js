@@ -1,6 +1,6 @@
-//=====================
+//====================
 //      Gallery
-//=====================
+//====================
 let posts = $('#posts');
 let btn_back = $('#back');
 let gallery_swiper = $('.gallery-swiper');
@@ -22,11 +22,9 @@ function BackToPanel(){
         gallery_swiper.eq(i).css('display', 'none');
     }
 }
-
-
-//=====================
+//====================
 //   Gallery Slider
-//=====================
+//====================
 let gallery_sliders = $('#gallery-slides')
 let gallery_overlay = $('.gallery-overlay')
 let slider_small = $('.slider-small')
@@ -79,19 +77,18 @@ function Check(){
 }
 //Нихуя не понимаю(
 
-
-//=====================
+//====================
 //   About Swiper
-//=====================
+//====================
 const swiper_about = new Swiper('.swiper-about', {
     slidesPerView: 3,
     
     loop: true,
     
     pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      bulletActiveClass: 'active-bullet',
+        el: '.swiper-pagination',
+        clickable: true,
+        bulletActiveClass: 'active-bullet',
     },
     
     navigation: {

@@ -1,24 +1,8 @@
-/* ------------------------------------- */
-/*               Default                 */
-/* ------------------------------------- */
 :root{
     --green: rgb(68, 163, 68);
     --dark: rgb(27, 27, 27);
 }
 
-body{
-    font-family: Ubuntu;
-    margin: 0;
-}
-
-h1,h2,h3,h4,h5,p{
-    cursor: default;
-    color: white;
-}
-
-/* ------------------------------------- */
-/*               Scrollbar               */
-/* ------------------------------------- */
 ::-webkit-scrollbar{
     width: 15px;
 }
@@ -32,10 +16,16 @@ h1,h2,h3,h4,h5,p{
     border: 3px solid var(--dark);
 }
 
+body{
+    font-family: Ubuntu;
+    margin: 0;
+}
 
-/* ------------------------------------- */
-/*               My class                */
-/* ------------------------------------- */
+h1,h2,h3,h4,h5,p{
+    cursor: default;
+    color: white;
+}
+
 .free-space{
     width: 100%;
     height: 70px;
@@ -44,7 +34,6 @@ h1,h2,h3,h4,h5,p{
 .indent-header{margin-bottom: 50px;}
 
 .text-white{color: #fff;}
-
 .text-center{text-align: center;}
 
 .transition-block{
@@ -63,11 +52,10 @@ h1,h2,h3,h4,h5,p{
 }
 
 @media screen and (max-width: 1920px) {
-    /* ------------------------------------- */
-    /*                 Header                */
-    /* ------------------------------------- */
+    /* Header */
     header{
         height: 910px;
+        width: 100%;
         position: relative;
         background-color: rgba(0, 0, 0, 0.465);
         background-image: url("../img/school.jpg");
@@ -83,15 +71,15 @@ h1,h2,h3,h4,h5,p{
 
     .header-content{
         height: 354px;
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
         color: white;
         opacity: .9;
         z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
-    
+
     .header-content h1{
         font-size: 50px;
         font-weight: 700;
@@ -101,7 +89,7 @@ h1,h2,h3,h4,h5,p{
         font-size: 50px;
         color:rgb(68, 163, 68);
     }
-    
+
     .header-content h4{
         width: 1200px;
         margin: 0 auto;
@@ -122,16 +110,14 @@ h1,h2,h3,h4,h5,p{
         transition: all .3s ease;
         transform: scale(1.1);
     }
-    
+
     .btn-main:hover{
         box-shadow: 0 0 10px rgb(68, 163, 68);
-        transform: scale(1.17)
+        transform: scale(1.17);
     }
 
 
-    /* ------------------------------------- */
-    /*               Navigation              */
-    /* ------------------------------------- */
+    /* navigation */
     #navigation-block{
         background-color: var(--green);
         width: 100%;
@@ -188,10 +174,7 @@ h1,h2,h3,h4,h5,p{
         font-size: 0.95rem;
     }
 
-
-    /* ------------------------------------- */
-    /*                  News                 */
-    /* ------------------------------------- */
+    /* news */
     #news{
         min-height: 620px;
         background-color: rgba(0, 0, 0, 0.465);
@@ -287,9 +270,7 @@ h1,h2,h3,h4,h5,p{
         color:white;
     }
 
-    /* ------------------------------------- */
-    /*                Gallery                */
-    /* ------------------------------------- */
+    /* gallery */
     #gallery{
         width: 100%;
         height: 900px;
@@ -465,17 +446,15 @@ h1,h2,h3,h4,h5,p{
 
     #gallery-slides #back:hover{
         box-shadow: 0 0 8px white;
-        /* text-shadow: 0 0 8px white; */
     }
 
-    /* ------------------------------------- */
-    /*                 About                 */
-    /* ------------------------------------- */
+
+    /* about */
     #about{
         width: 100%;
         min-height: 700px;
         background-color: rgba(0, 0, 0, 0.465);
-        background-image: url("../../img/bg-about.jpg");
+        background-image: url("../img/bg-about.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -553,21 +532,19 @@ h1,h2,h3,h4,h5,p{
     }
 
 
-    /* ------------------------------------- */
-    /*                Contact                */
-    /* ------------------------------------- */
+    /* contact */
     #contact{
         width: 100%;
         min-height: 600px;
         background-color: var(--green);
     }
-    
+
     #header-contact{
         text-align: center;
         padding-bottom: 50px;
         color: white;
     }
-    
+
     #map{
         width: 400;
         margin: auto 0;
@@ -575,7 +552,7 @@ h1,h2,h3,h4,h5,p{
         box-shadow: 2px 2px 10px black;
         overflow: hidden;
     }
-    
+
     .line1{
         background-color: rgb(218, 218, 218);
         width: 100%;
@@ -583,27 +560,26 @@ h1,h2,h3,h4,h5,p{
         border-radius: 10px;
         margin: 10px auto;
     }
-    
+
     #social img{
         width: 50px;
         border-radius: 50%;
         transition: box-shadow 0.2s ease-in-out;
     }
-    
+
     #social img:hover{
         box-shadow: 0 0 5px white;
     }
 
-    /* ------------------------------------- */
-    /*                 Footer                */
-    /* ------------------------------------- */
+    /* footer */
+
     footer{
         height: 100px;
         width: 100%;
-        background-image: url('../../img/footer.jpg');
+        background-image: url('../img/footer.jpg');
         background-size: 300px;
     }
-    
+
     .footer-content{
         width: 100%;
         height: 70px;
@@ -612,22 +588,22 @@ h1,h2,h3,h4,h5,p{
         justify-content: center;
         padding-top: 30px;
     }
-    
+
     footer img{
         width: 50px;
     }
-    
+
     .footer-content{
         width: 100%;
         color: white;
         text-align: center;
         font-size: 0.9em;
     }
-    
+
     .footer-content a{
         color: white;
     }
-    
+
     .footer-content p{
         margin: 0;
     }
@@ -1051,7 +1027,7 @@ h1,h2,h3,h4,h5,p{
         width: 100%;
         min-height: 700px;
         background-color: rgba(0, 0, 0, 0.465);
-        background-image: url("../../img/bg-about.jpg");
+        background-image: url("../img/bg-about.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -1194,7 +1170,7 @@ h1,h2,h3,h4,h5,p{
     footer{
         height: 100px;
         width: 100%;
-        background-image: url('../../img/footer.jpg');
+        background-image: url('../img/footer.jpg');
         background-size: 300px;
     }
     

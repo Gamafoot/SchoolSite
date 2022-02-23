@@ -1,4 +1,3 @@
-from operator import index
 from flask import Flask, render_template
 from DataBase import DataBase
 import os
@@ -12,18 +11,18 @@ db = DataBase()
 def main():
     data_teachers = db.getData('SELECT fio, text, photo FROM teachers', 'all')
     
-    #Gallery
+    #Filling massiv
     gallery = []
-    path = os.path.dirname(__file__) + '\static\img\gallery'
+    path = os.path.dirname(__file__) + '/static/img/gallery'
     index = 0
     for folder_name in os.listdir(path):
-        for post_name in os.listdir(path+'\\'+folder_name):
+        for post_name in os.listdir(path+'/'+folder_name):
             gallery.append({
                 'title':post_name,
                 'date':folder_name,
                 'photos':[]
             })
-            for file_name in os.listdir(path+'\\'+folder_name+'\\'+post_name):
+            for file_name in os.listdir(path+'/'+folder_name+'/'+post_name):
                 gallery[index]['photos'].append(folder_name+'/'+post_name+'/'+file_name)
             index += 1
     #Sort
@@ -46,4 +45,4 @@ def detail(num):
 def test():
     return render_template('test.html')
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)

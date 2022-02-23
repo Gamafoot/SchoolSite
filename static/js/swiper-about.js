@@ -1,6 +1,3 @@
-//=====================
-//   About Swiper
-//=====================
 const swiper_about = new Swiper('.swiper-about', {
     slidesPerView: 3,
     
